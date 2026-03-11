@@ -12,8 +12,8 @@ function FAQItem({ q, a, isDark }: { q: string; a: string; isDark: boolean }) {
         onClick={() => setOpen(!open)}
         style={{ width: "100%", display: "flex", justifyContent: "space-between", alignItems: "center", padding: "18px 22px", background: "none", border: "none", cursor: "pointer", gap: 16, textAlign: "left" }}
       >
-        <span style={{ fontSize: 15, fontWeight: 600, color: tc, fontFamily: "Epilogue,sans-serif", lineHeight: 1.4 }}>{q}</span>
-        <span style={{ color: "var(--teal)", flexShrink: 0 }}>{open ? <Minus size={17} /> : <Plus size={17} />}</span>
+        <span style={{ fontSize: 15, fontWeight: 600, color: tc, fontFamily: "DM Sans,sans-serif", lineHeight: 1.4 }}>{q}</span>
+        <span style={{ color: "var(--yellow)", flexShrink: 0 }}>{open ? <Minus size={17} /> : <Plus size={17} />}</span>
       </button>
       {open && (
         <div style={{ padding: "0 22px 18px", fontSize: 14, color: ts, lineHeight: 1.7 }}>{a}</div>
@@ -47,7 +47,7 @@ const faqGroups = [
 ];
 
 export default function FAQ({ isDark }: { isDark: boolean }) {
-  const bg = isDark ? "var(--navy-2)" : "#F4F6FA";
+  const bg = isDark ? "var(--navy)" : "#F4F6FA";
   const tc = isDark ? "white" : "#060D1B";
   const ts = isDark ? "#94A8C4" : "#475569";
   const [activeGroup, setActiveGroup] = useState(0);
@@ -57,7 +57,7 @@ export default function FAQ({ isDark }: { isDark: boolean }) {
       <div style={{ maxWidth: 960, margin: "0 auto", padding: "0 24px" }}>
         <div style={{ textAlign: "center", marginBottom: 56 }}>
           <div className="section-label" style={{ justifyContent: "center" }}>❓ FAQs</div>
-          <h2 style={{ fontFamily: "Epilogue,sans-serif", fontWeight: 900, fontSize: "clamp(28px, 4vw, 48px)", color: tc, margin: "0 0 16px", letterSpacing: "-0.03em", lineHeight: 1.1 }}>
+          <h2 style={{ fontFamily: "DM Sans,sans-serif", fontWeight: 900, fontSize: "clamp(28px, 4vw, 48px)", color: tc, margin: "0 0 16px", letterSpacing: "-0.03em", lineHeight: 1.1 }}>
             Frequently asked questions.
           </h2>
           <p style={{ fontSize: 17, color: ts, margin: 0 }}>Everything you need to know before getting started with Paige.</p>
@@ -69,7 +69,7 @@ export default function FAQ({ isDark }: { isDark: boolean }) {
             <button
               key={g.group}
               onClick={() => setActiveGroup(i)}
-              style={{ display: "flex", alignItems: "center", gap: 8, padding: "10px 20px", borderRadius: 100, border: `1.5px solid ${activeGroup === i ? g.color : "var(--border-dark)"}`, background: activeGroup === i ? `${g.color}15` : "transparent", color: activeGroup === i ? g.color : ts, fontWeight: 600, fontSize: 14, cursor: "pointer", transition: "all 0.2s", fontFamily: "Epilogue,sans-serif" }}
+              style={{ display: "flex", alignItems: "center", gap: 8, padding: "10px 20px", borderRadius: 100, border: `1.5px solid ${activeGroup === i ? g.color : "var(--border-dark)"}`, background: activeGroup === i ? `${g.color}15` : "transparent", color: activeGroup === i ? g.color : ts, fontWeight: 600, fontSize: 14, cursor: "pointer", transition: "all 0.2s", fontFamily: "DM Sans,sans-serif" }}
             >
               <span>{g.icon}</span> {g.group}
             </button>

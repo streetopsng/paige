@@ -16,8 +16,8 @@ export function EarlyAccessCTA({ isDark }: { isDark: boolean }) {
           {/* Left: copy */}
           <div>
             <div className="section-label">🚀 Beta Access — Limited Spots</div>
-            <h2 style={{ fontFamily: "Epilogue,sans-serif", fontWeight: 900, fontSize: "clamp(28px, 4vw, 48px)", color: isDark ? "white" : "#060D1B", margin: "0 0 20px", letterSpacing: "-0.03em", lineHeight: 1.1 }}>
-              Be first to experience<br /><span style={{ color: "var(--teal)" }}>Paige by StreetOps.</span>
+            <h2 style={{ fontFamily: "DM Sans,sans-serif", fontWeight: 900, fontSize: "clamp(28px, 4vw, 48px)", color: isDark ? "white" : "#060D1B", margin: "0 0 20px", letterSpacing: "-0.03em", lineHeight: 1.1 }}>
+              Be first to experience<br /><span style={{ color: "var(--yellow)" }}>Paige by StreetOps.</span>
             </h2>
             <p style={{ fontSize: 17, color: ts, lineHeight: 1.7, marginBottom: 32 }}>
               Join our early access list today. Beta users get founder pricing locked in for 12 months, white-glove onboarding, and the ability to shape the product roadmap.
@@ -26,7 +26,7 @@ export function EarlyAccessCTA({ isDark }: { isDark: boolean }) {
               {["Free to use during the beta period","No credit card required","Direct access to the StreetOps team","Founder pricing locked for 12 months post-launch"].map((pt) => (
                 <div key={pt} style={{ display: "flex", alignItems: "center", gap: 10 }}>
                   <div style={{ width: 20, height: 20, borderRadius: "50%", background: "rgba(0,178,169,0.15)", border: "1px solid rgba(0,178,169,0.3)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                    <span style={{ fontSize: 10, color: "var(--teal)" }}>✓</span>
+                    <span style={{ fontSize: 10, color: "var(--yellow)" }}>✓</span>
                   </div>
                   <span style={{ fontSize: 14, color: ts }}>{pt}</span>
                 </div>
@@ -35,10 +35,10 @@ export function EarlyAccessCTA({ isDark }: { isDark: boolean }) {
           </div>
 
           {/* Right: form */}
-          <div style={{ background: isDark ? "var(--navy-3)" : "white", border: isDark ? "1px solid var(--border-dark)" : "1px solid #E5EAF0", borderRadius: 24, padding: "40px 36px", boxShadow: "0 24px 60px rgba(0,0,0,0.12)" }}>
+          <div style={{ background: isDark ? "rgba(255,255,255,0.03)" : "white", border: isDark ? "1px solid var(--border-dark)" : "1px solid #E5EAF0", borderRadius: 24, padding: "40px 36px", boxShadow: "0 24px 60px rgba(0,0,0,0.12)" }}>
             {!submitted ? (
               <>
-                <h3 style={{ fontFamily: "Epilogue,sans-serif", fontWeight: 800, fontSize: 22, color: isDark ? "white" : "#060D1B", margin: "0 0 8px" }}>Request Early Access</h3>
+                <h3 style={{ fontFamily: "DM Sans,sans-serif", fontWeight: 800, fontSize: 22, color: isDark ? "white" : "#060D1B", margin: "0 0 8px" }}>Request Early Access</h3>
                 <p style={{ fontSize: 14, color: ts, marginBottom: 28 }}>We'll reach out with your onboarding details within 48 hours.</p>
                 <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
                   <input
@@ -52,7 +52,7 @@ export function EarlyAccessCTA({ isDark }: { isDark: boolean }) {
                   />
                   <select
                     value={role} onChange={(e) => setRole(e.target.value)}
-                    style={{ width: "100%", padding: "13px 16px", borderRadius: 10, border: isDark ? "1px solid var(--border-dark)" : "1px solid #CBD5E1", background: isDark ? "var(--navy-2)" : "white", color: role ? (isDark ? "white" : "#060D1B") : "var(--slate)", fontSize: 14, outline: "none", fontFamily: "Inter,sans-serif" }}
+                    style={{ width: "100%", padding: "13px 16px", borderRadius: 10, border: isDark ? "1px solid var(--border-dark)" : "1px solid #CBD5E1", background: isDark ? "var(--navy)" : "white", color: role ? (isDark ? "white" : "#060D1B") : "var(--white)", fontSize: 14, outline: "none", fontFamily: "Inter,sans-serif" }}
                   >
                     <option value="">I am a…</option>
                     <option value="company">Company Executive / Founder</option>
@@ -71,14 +71,14 @@ export function EarlyAccessCTA({ isDark }: { isDark: boolean }) {
                     Request Access <ArrowRight size={16} />
                   </button>
                 </div>
-                <p style={{ fontSize: 12, color: "var(--slate)", marginTop: 16, textAlign: "center" }}>
+                <p style={{ fontSize: 12, color: "var(--white)", marginTop: 16, textAlign: "center" }}>
                   By submitting, you agree to our Privacy Policy. No spam, ever.
                 </p>
               </>
             ) : (
               <div style={{ textAlign: "center", padding: "20px 0" }}>
                 <div style={{ fontSize: 52, marginBottom: 16 }}>🎉</div>
-                <h3 style={{ fontFamily: "Epilogue,sans-serif", fontWeight: 800, fontSize: 22, color: isDark ? "white" : "#060D1B", margin: "0 0 12px" }}>You're on the list!</h3>
+                <h3 style={{ fontFamily: "DM Sans,sans-serif", fontWeight: 800, fontSize: 22, color: isDark ? "white" : "#060D1B", margin: "0 0 12px" }}>You're on the list!</h3>
                 <p style={{ fontSize: 15, color: ts, lineHeight: 1.6 }}>We'll be in touch within 48 hours with your early access details. Welcome to the future of team engagement.</p>
               </div>
             )}
@@ -97,13 +97,13 @@ export function TeamLeadCTA({ isDark }: { isDark: boolean }) {
         <div style={{ position: "absolute", top: -40, right: 80, width: 200, height: 200, borderRadius: "50%", background: "rgba(255,255,255,0.05)" }} />
         <div style={{ position: "absolute", bottom: -60, left: 40, width: 160, height: 160, borderRadius: "50%", background: "rgba(255,255,255,0.05)" }} />
         <div style={{ fontSize: 48, marginBottom: 20 }}>👥</div>
-        <h2 style={{ fontFamily: "Epilogue,sans-serif", fontWeight: 900, fontSize: "clamp(24px, 4vw, 44px)", color: "white", margin: "0 0 16px", letterSpacing: "-0.02em", lineHeight: 1.15, maxWidth: 700 }}>
+        <h2 style={{ fontFamily: "DM Sans,sans-serif", fontWeight: 900, fontSize: "clamp(24px, 4vw, 44px)", color: "white", margin: "0 0 16px", letterSpacing: "-0.02em", lineHeight: 1.15, maxWidth: 700 }}>
           Ready to take control of your team's engagement?
         </h2>
         <p style={{ fontSize: 17, color: "rgba(255,255,255,0.8)", maxWidth: 560, margin: "0 0 36px", lineHeight: 1.65 }}>
           Stop leading blind. Join team leads using Paige to build teams that are engaged, performing, and built to last.
         </p>
-        <a href="#early-access" style={{ display: "inline-flex", alignItems: "center", gap: 10, padding: "15px 32px", background: "white", color: "#006B66", fontWeight: 700, fontSize: 15, borderRadius: 10, textDecoration: "none", fontFamily: "Epilogue,sans-serif", transition: "transform 0.2s, box-shadow 0.2s", boxShadow: "0 8px 30px rgba(0,0,0,0.2)" }}>
+        <a href="#early-access" style={{ display: "inline-flex", alignItems: "center", gap: 10, padding: "15px 32px", background: "white", color: "#006B66", fontWeight: 700, fontSize: 15, borderRadius: 10, textDecoration: "none", fontFamily: "DM Sans,sans-serif", transition: "transform 0.2s, box-shadow 0.2s", boxShadow: "0 8px 30px rgba(0,0,0,0.2)" }}>
           Join as a Team Lead <ArrowRight size={16} />
         </a>
       </div>
@@ -123,7 +123,7 @@ export function WhatsAppWidget() {
           <div style={{ background: "#075E54", padding: "16px 16px 14px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
             <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
               <div style={{ width: 38, height: 38, borderRadius: "50%", background: "rgba(255,255,255,0.2)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <span style={{ color: "white", fontWeight: 800, fontFamily: "Epilogue,sans-serif", fontSize: 16 }}>P</span>
+                <span style={{ color: "white", fontWeight: 800, fontFamily: "DM Sans,sans-serif", fontSize: 16 }}>P</span>
               </div>
               <div>
                 <div style={{ color: "white", fontWeight: 700, fontSize: 14 }}>Paige Support</div>
@@ -197,10 +197,10 @@ export function Footer({ isDark }: { isDark: boolean }) {
           <div>
             <a href="#" style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none", marginBottom: 20 }}>
               <div style={{ width: 36, height: 36, borderRadius: 10, background: "linear-gradient(135deg, #00B2A9, #007A75)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <span style={{ color: "white", fontWeight: 900, fontSize: 18, fontFamily: "Epilogue,sans-serif" }}>P</span>
+                <span style={{ color: "white", fontWeight: 900, fontSize: 18, fontFamily: "DM Sans,sans-serif" }}>P</span>
               </div>
               <div>
-                <div style={{ color: "white", fontFamily: "Epilogue,sans-serif", fontWeight: 800, fontSize: 20, lineHeight: 1 }}>Paige</div>
+                <div style={{ color: "white", fontFamily: "DM Sans,sans-serif", fontWeight: 800, fontSize: 20, lineHeight: 1 }}>Paige</div>
                 <div style={{ color: "#6B80A0", fontSize: 10, letterSpacing: "0.06em" }}>by StreetOps</div>
               </div>
             </a>
@@ -223,7 +223,7 @@ export function Footer({ isDark }: { isDark: boolean }) {
           {/* Link columns */}
           {Object.entries(footerLinks).map(([cat, links]) => (
             <div key={cat}>
-              <h4 style={{ color: "white", fontFamily: "Epilogue,sans-serif", fontWeight: 700, fontSize: 14, marginBottom: 20, marginTop: 0 }}>{cat}</h4>
+              <h4 style={{ color: "white", fontFamily: "DM Sans,sans-serif", fontWeight: 700, fontSize: 14, marginBottom: 20, marginTop: 0 }}>{cat}</h4>
               <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 12 }}>
                 {links.map((link) => (
                   <li key={link.label}>

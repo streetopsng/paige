@@ -102,11 +102,11 @@ export default function Navbar({ isDark, toggleTheme }: NavbarProps) {
       {/* Utility Nav */}
       <div className="utility-nav">
         <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 24px", display: "flex", alignItems: "center", justifyContent: "flex-end", gap: 20, height: 38 }}>
-          <a href="#contact" style={{ fontSize: 12, fontWeight: 500, color: "var(--slate-light)", textDecoration: "none" }}>Support</a>
+          <a href="#contact" style={{ fontSize: 12, fontWeight: 500, color: "var(--white)", textDecoration: "none" }}>Support</a>
           <div style={{ width: 1, height: 14, background: "var(--border-dark)" }} />
-          <a href="#early-access" style={{ fontSize: 12, fontWeight: 500, color: "var(--slate-light)", textDecoration: "none" }}>Login</a>
+          <a href="#early-access" style={{ fontSize: 12, fontWeight: 500, color: "var(--white)", textDecoration: "none" }}>Login</a>
           <div style={{ width: 1, height: 14, background: "var(--border-dark)" }} />
-          <span style={{ fontSize: 12, fontWeight: 500, color: "var(--slate-light)" }}>EN</span>
+          <span style={{ fontSize: 12, fontWeight: 500, color: "var(--white)" }}>EN</span>
         </div>
       </div>
 
@@ -116,10 +116,10 @@ export default function Navbar({ isDark, toggleTheme }: NavbarProps) {
           {/* Logo */}
           <a href="#" style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none" }}>
             <div style={{ width: 36, height: 36, borderRadius: 10, background: "linear-gradient(135deg, #00B2A9, #007A75)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-              <span style={{ color: "white", fontWeight: 900, fontSize: 18, fontFamily: "Epilogue,sans-serif" }}>P</span>
+              <span style={{ color: "white", fontWeight: 900, fontSize: 18, fontFamily: "DM Sans,sans-serif" }}>P</span>
             </div>
             <div>
-              <div className={`${tc}`} style={{ fontFamily: "Epilogue,sans-serif", fontWeight: 800, fontSize: 20, lineHeight: 1 }}>Paige</div>
+              <div className={`${tc}`} style={{ fontFamily: "DM Sans,sans-serif", fontWeight: 800, fontSize: 20, lineHeight: 1 }}>Paige</div>
               <div className={logoSubColor} style={{ fontSize: 10, fontWeight: 500, letterSpacing: "0.06em", lineHeight: 1.2 }}>by StreetOps</div>
             </div>
           </a>
@@ -179,9 +179,9 @@ export default function Navbar({ isDark, toggleTheme }: NavbarProps) {
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 32 }}>
             <a href="#" style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none" }}>
               <div style={{ width: 32, height: 32, borderRadius: 8, background: "linear-gradient(135deg, #00B2A9, #007A75)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <span style={{ color: "white", fontWeight: 900, fontSize: 16, fontFamily: "Epilogue,sans-serif" }}>P</span>
+                <span style={{ color: "white", fontWeight: 900, fontSize: 16, fontFamily: "DM Sans,sans-serif" }}>P</span>
               </div>
-              <span className={tc} style={{ fontFamily: "Epilogue,sans-serif", fontWeight: 800, fontSize: 18 }}>Paige</span>
+              <span className={tc} style={{ fontFamily: "DM Sans,sans-serif", fontWeight: 800, fontSize: 18 }}>Paige</span>
             </a>
             <button onClick={() => setMobileOpen(false)} style={{ width: 36, height: 36, borderRadius: 8, border: "1px solid var(--border-dark)", background: "transparent", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", color: isDark ? "white" : "#374151" }}>
               <X size={18} />
@@ -193,10 +193,10 @@ export default function Navbar({ isDark, toggleTheme }: NavbarProps) {
                 onClick={() => setMobileExpanded(mobileExpanded === item.label ? null : item.label)}
                 style={{ display: "flex", justifyContent: "space-between", alignItems: "center", width: "100%", background: "none", border: "none", padding: "8px 0", cursor: "pointer" }}
               >
-                <a href={item.href} className={`${tc}`} style={{ fontFamily: "Epilogue,sans-serif", fontWeight: 700, fontSize: 18, textDecoration: "none" }} onClick={() => setMobileOpen(false)}>
+                <a href={item.href} className={`${tc}`} style={{ fontFamily: "DM Sans,sans-serif", fontWeight: 700, fontSize: 18, textDecoration: "none" }} onClick={() => setMobileOpen(false)}>
                   {item.label}
                 </a>
-                {item.mega && <ChevronDown size={16} style={{ color: "var(--slate-light)", transform: mobileExpanded === item.label ? "rotate(180deg)" : "none", transition: "transform 0.2s" }} />}
+                {item.mega && <ChevronDown size={16} style={{ color: "var(--white)", transform: mobileExpanded === item.label ? "rotate(180deg)" : "none", transition: "transform 0.2s" }} />}
               </button>
               {item.mega && mobileExpanded === item.label && (
                 <div style={{ paddingLeft: 12, marginTop: 8 }}>

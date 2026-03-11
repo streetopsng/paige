@@ -17,7 +17,7 @@ function BenefitSection({ id, audience, icon, color, header, sub, benefits, isDa
   const tc = isDark ? "white" : "#060D1B";
   const ts = isDark ? "#94A8C4" : "#475569";
   const sectionBg = isDark ? "var(--navy)" : "#FFFFFF";
-  const altBg = isDark ? "var(--navy-2)" : "#F4F6FA";
+  const altBg = isDark ? "var(--navy)" : "#F4F6FA";
 
   return (
     <div id={id} style={{ padding: "96px 0", background: id === "companies" || id === "team-members" ? sectionBg : altBg }}>
@@ -28,7 +28,7 @@ function BenefitSection({ id, audience, icon, color, header, sub, benefits, isDa
             <div style={{ display: "inline-flex", alignItems: "center", gap: 8, fontSize: 11, fontWeight: 700, textTransform: "uppercase" as const, letterSpacing: "0.12em", color, background: `${color}12`, border: `1px solid ${color}25`, borderRadius: 100, padding: "5px 14px", marginBottom: 16 }}>
               <span>{icon}</span> For {audience}
             </div>
-            <h2 style={{ fontFamily: "Epilogue,sans-serif", fontWeight: 900, fontSize: "clamp(24px, 3.5vw, 40px)", color: tc, margin: "0 0 16px", lineHeight: 1.15, letterSpacing: "-0.025em", maxWidth: 600 }}>{header}</h2>
+            <h2 style={{ fontFamily: "DM Sans,sans-serif", fontWeight: 900, fontSize: "clamp(24px, 3.5vw, 40px)", color: tc, margin: "0 0 16px", lineHeight: 1.15, letterSpacing: "-0.025em", maxWidth: 600 }}>{header}</h2>
             <p style={{ fontSize: 16, color: ts, lineHeight: 1.65, margin: 0, maxWidth: 540 }}>{sub}</p>
           </div>
           <div style={{ paddingTop: 8 }}>
@@ -43,9 +43,9 @@ function BenefitSection({ id, audience, icon, color, header, sub, benefits, isDa
           {benefits.map((b, i) => (
             <div key={i} className="benefit-card">
               <div style={{ width: 32, height: 32, borderRadius: 8, background: `${color}15`, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 14 }}>
-                <span style={{ fontSize: 13, fontWeight: 800, fontFamily: "Epilogue,sans-serif", color }}>{String(i+1).padStart(2,"0")}</span>
+                <span style={{ fontSize: 13, fontWeight: 800, fontFamily: "DM Sans,sans-serif", color }}>{String(i+1).padStart(2,"0")}</span>
               </div>
-              <h4 style={{ fontFamily: "Epilogue,sans-serif", fontWeight: 700, fontSize: 15, color: tc, margin: "0 0 8px" }}>{b.title}</h4>
+              <h4 style={{ fontFamily: "DM Sans,sans-serif", fontWeight: 700, fontSize: 15, color: tc, margin: "0 0 8px" }}>{b.title}</h4>
               <p style={{ fontSize: 13.5, color: ts, margin: 0, lineHeight: 1.6 }}>{b.sub}</p>
             </div>
           ))}
@@ -58,7 +58,7 @@ function BenefitSection({ id, audience, icon, color, header, sub, benefits, isDa
 export default function Solution({ isDark }: SolutionProps) {
   const tc = isDark ? "white" : "#060D1B";
   const ts = isDark ? "#94A8C4" : "#475569";
-  const cardBg = isDark ? "var(--navy-3)" : "#F8FAFC";
+  const cardBg = isDark ? "rgba(255,255,255,0.03)" : "#F8FAFC";
   const border = isDark ? "1px solid var(--border-dark)" : "1px solid #E5EAF0";
 
   const companyB = [
@@ -110,8 +110,8 @@ export default function Solution({ isDark }: SolutionProps) {
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, alignItems: "center" }}>
             <div>
               <div className="section-label">✨ The Solution</div>
-              <h2 style={{ fontFamily: "Epilogue,sans-serif", fontWeight: 900, fontSize: "clamp(28px, 4vw, 52px)", color: tc, margin: "0 0 20px", lineHeight: 1.1, letterSpacing: "-0.03em" }}>
-                Introducing Paige<br /><span style={{ color: "var(--teal)" }}>by StreetOps</span>
+              <h2 style={{ fontFamily: "DM Sans,sans-serif", fontWeight: 900, fontSize: "clamp(28px, 4vw, 52px)", color: tc, margin: "0 0 20px", lineHeight: 1.1, letterSpacing: "-0.03em" }}>
+                Introducing Paige<br /><span style={{ color: "var(--yellow)" }}>by StreetOps</span>
               </h2>
               <p style={{ fontSize: 17, color: ts, lineHeight: 1.7, marginBottom: 32 }}>
                 The first team engagement intelligence platform built for the realities of modern work — continuous, actionable, and designed for every layer of your organisation.
@@ -128,8 +128,8 @@ export default function Solution({ isDark }: SolutionProps) {
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
               {corePillars.map((p) => (
                 <div key={p.num} style={{ background: cardBg, border, borderRadius: 18, padding: "24px", transition: "transform 0.2s" }}>
-                  <div style={{ fontSize: 11, fontWeight: 800, fontFamily: "Epilogue,sans-serif", color: p.color, marginBottom: 10 }}>{p.num}</div>
-                  <h4 style={{ fontFamily: "Epilogue,sans-serif", fontWeight: 700, fontSize: 15, color: tc, margin: "0 0 8px" }}>{p.title}</h4>
+                  <div style={{ fontSize: 11, fontWeight: 800, fontFamily: "DM Sans,sans-serif", color: p.color, marginBottom: 10 }}>{p.num}</div>
+                  <h4 style={{ fontFamily: "DM Sans,sans-serif", fontWeight: 700, fontSize: 15, color: tc, margin: "0 0 8px" }}>{p.title}</h4>
                   <p style={{ fontSize: 13, color: ts, margin: 0, lineHeight: 1.55 }}>{p.sub}</p>
                 </div>
               ))}

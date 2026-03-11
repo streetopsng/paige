@@ -21,8 +21,8 @@ const roleColors: Record<string, string> = {
 };
 
 export default function HowItWorks({ isDark }: { isDark: boolean }) {
-  const bg = isDark ? "var(--navy-2)" : "#F4F6FA";
-  const cardBg = isDark ? "var(--navy-3)" : "#FFFFFF";
+  const bg = isDark ? "var(--navy)" : "#F4F6FA";
+  const cardBg = isDark ? "rgba(255,255,255,0.03)" : "#FFFFFF";
   const border = isDark ? "1px solid var(--border-dark)" : "1px solid #E5EAF0";
   const tc = isDark ? "white" : "#060D1B";
   const ts = isDark ? "#94A8C4" : "#475569";
@@ -32,7 +32,7 @@ export default function HowItWorks({ isDark }: { isDark: boolean }) {
       <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 24px" }}>
         <div style={{ textAlign: "center", maxWidth: 680, margin: "0 auto 72px" }}>
           <div className="section-label" style={{ justifyContent: "center" }}>⚡ How It Works</div>
-          <h2 style={{ fontFamily: "Epilogue,sans-serif", fontWeight: 900, fontSize: "clamp(28px, 4vw, 52px)", color: tc, margin: "0 0 16px", letterSpacing: "-0.03em", lineHeight: 1.1 }}>
+          <h2 style={{ fontFamily: "DM Sans,sans-serif", fontWeight: 900, fontSize: "clamp(28px, 4vw, 52px)", color: tc, margin: "0 0 16px", letterSpacing: "-0.03em", lineHeight: 1.1 }}>
             From first pulse check<br />to thriving team culture.
           </h2>
           <p style={{ fontSize: 17, color: ts, lineHeight: 1.65, margin: 0 }}>
@@ -46,11 +46,11 @@ export default function HowItWorks({ isDark }: { isDark: boolean }) {
             <div key={step.step} style={{ display: "flex", gap: 28, marginBottom: idx < steps.length - 1 ? 8 : 0 }}>
               {/* Left: number + line */}
               <div style={{ display: "flex", flexDirection: "column", alignItems: "center", flexShrink: 0 }}>
-                <div style={{ width: 48, height: 48, borderRadius: "50%", background: "var(--teal)", color: "white", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 900, fontSize: 15, fontFamily: "Epilogue,sans-serif", boxShadow: "0 0 20px rgba(0,178,169,0.35)", zIndex: 2 }}>
+                <div style={{ width: 48, height: 48, borderRadius: "50%", background: "var(--yellow)", color: "white", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 900, fontSize: 15, fontFamily: "DM Sans,sans-serif", boxShadow: "0 0 20px rgba(0,178,169,0.35)", zIndex: 2 }}>
                   {step.step}
                 </div>
                 {idx < steps.length - 1 && (
-                  <div style={{ width: 2, flex: 1, minHeight: 32, background: "linear-gradient(to bottom, var(--teal), rgba(0,178,169,0.1))", margin: "4px 0" }} />
+                  <div style={{ width: 2, flex: 1, minHeight: 32, background: "linear-gradient(to bottom, var(--yellow), rgba(0,178,169,0.1))", margin: "4px 0" }} />
                 )}
               </div>
               {/* Right: card */}
@@ -60,7 +60,7 @@ export default function HowItWorks({ isDark }: { isDark: boolean }) {
                 </div>
                 <div style={{ flex: 1 }}>
                   <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 6, flexWrap: "wrap" }}>
-                    <h3 style={{ fontFamily: "Epilogue,sans-serif", fontWeight: 700, fontSize: 16, color: tc, margin: 0 }}>{step.title}</h3>
+                    <h3 style={{ fontFamily: "DM Sans,sans-serif", fontWeight: 700, fontSize: 16, color: tc, margin: 0 }}>{step.title}</h3>
                     <span style={{ fontSize: 11, fontWeight: 700, padding: "2px 10px", borderRadius: 100, color: roleColors[step.role], background: `${roleColors[step.role]}15` }}>
                       {step.role}
                     </span>

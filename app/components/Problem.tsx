@@ -43,8 +43,8 @@ const problems = [
 ];
 
 export default function Problem({ isDark }: ProblemProps) {
-  const bg = isDark ? "var(--navy-2)" : "#F4F6FA";
-  const cardBg = isDark ? "var(--navy-3)" : "#FFFFFF";
+  const bg = isDark ? "var(--navy)" : "#F4F6FA";
+  const cardBg = isDark ? "rgba(255,255,255,0.03)" : "#FFFFFF";
   const border = isDark ? "1px solid var(--border-dark)" : "1px solid #E5EAF0";
   const tc = isDark ? "white" : "#060D1B";
   const ts = isDark ? "#94A8C4" : "#475569";
@@ -58,7 +58,7 @@ export default function Problem({ isDark }: ProblemProps) {
           <div className="section-label" style={{ justifyContent: "center", color: "#FF6640", background: "rgba(255,102,64,0.08)", borderColor: "rgba(255,102,64,0.22)" }}>
             ⚠️ The Problem
           </div>
-          <h2 style={{ fontFamily: "Epilogue,sans-serif", fontWeight: 900, fontSize: "clamp(28px, 4vw, 52px)", color: tc, margin: "0 0 16px", letterSpacing: "-0.03em", lineHeight: 1.1 }}>
+          <h2 style={{ fontFamily: "DM Sans,sans-serif", fontWeight: 900, fontSize: "clamp(28px, 4vw, 52px)", color: tc, margin: "0 0 16px", letterSpacing: "-0.03em", lineHeight: 1.1 }}>
             The engagement crisis is real.<br />And devastatingly expensive.
           </h2>
           <p style={{ fontSize: 18, color: ts, maxWidth: 580, margin: "0 auto", lineHeight: 1.6 }}>
@@ -70,9 +70,9 @@ export default function Problem({ isDark }: ProblemProps) {
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 16, marginBottom: 72 }}>
           {marketStats.map((s) => (
             <div key={s.label} style={{ background: cardBg, border, borderRadius: 16, padding: "24px 20px", borderLeft: `4px solid ${s.color}` }}>
-              <div style={{ fontSize: 32, fontWeight: 900, fontFamily: "Epilogue,sans-serif", color: s.color, lineHeight: 1, marginBottom: 8 }}>{s.value}</div>
+              <div style={{ fontSize: 32, fontWeight: 900, fontFamily: "DM Sans,sans-serif", color: s.color, lineHeight: 1, marginBottom: 8 }}>{s.value}</div>
               <div style={{ fontSize: 13, color: ts, lineHeight: 1.5, marginBottom: 6 }}>{s.label}</div>
-              <div style={{ fontSize: 11, color: "var(--slate)", fontWeight: 600 }}>— {s.source}</div>
+              <div style={{ fontSize: 11, color: "var(--white)", fontWeight: 600 }}>— {s.source}</div>
             </div>
           ))}
         </div>
@@ -86,17 +86,17 @@ export default function Problem({ isDark }: ProblemProps) {
                 <div>
                   <div style={{ fontSize: 48, marginBottom: 16 }}>{p.icon}</div>
                   <div style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.12em", color: p.color, marginBottom: 12 }}>{p.persona}</div>
-                  <h3 style={{ fontFamily: "Epilogue,sans-serif", fontWeight: 800, fontSize: "clamp(20px, 2.5vw, 28px)", color: tc, margin: "0 0 16px", lineHeight: 1.2 }}>{p.title}</h3>
+                  <h3 style={{ fontFamily: "DM Sans,sans-serif", fontWeight: 800, fontSize: "clamp(20px, 2.5vw, 28px)", color: tc, margin: "0 0 16px", lineHeight: 1.2 }}>{p.title}</h3>
                   <p style={{ fontSize: 15, color: ts, lineHeight: 1.65, margin: 0 }}>{p.description}</p>
                 </div>
                 <div style={{ marginTop: 32, background: `${p.color}15`, border: `1px solid ${p.color}30`, borderRadius: 14, padding: "20px 24px" }}>
-                  <div style={{ fontSize: 36, fontWeight: 900, fontFamily: "Epilogue,sans-serif", color: p.color, lineHeight: 1 }}>{p.stat}</div>
+                  <div style={{ fontSize: 36, fontWeight: 900, fontFamily: "DM Sans,sans-serif", color: p.color, lineHeight: 1 }}>{p.stat}</div>
                   <div style={{ fontSize: 13, color: ts, marginTop: 6, lineHeight: 1.5 }}>{p.statLabel}</div>
                 </div>
               </div>
               {/* Pain points panel */}
               <div style={{ padding: "48px 40px", order: idx % 2 !== 0 ? 0 : 1 }}>
-                <div style={{ fontSize: 12, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em", color: "var(--slate)", marginBottom: 24 }}>Key Pain Points</div>
+                <div style={{ fontSize: 12, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em", color: "var(--white)", marginBottom: 24 }}>Key Pain Points</div>
                 <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
                   {p.painPoints.map((pt) => (
                     <div key={pt} style={{ display: "flex", gap: 14, alignItems: "flex-start" }}>
