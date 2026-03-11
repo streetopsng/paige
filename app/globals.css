@@ -83,7 +83,7 @@ body.light-mode .main-nav { background: rgba(255,255,255,0.97); border-bottom: 1
 }
 body.light-mode .mega-menu {
   background: #FFFFFF;
-  border: 1px solid #E5EAF0;
+  border: 1px solid rgba(0,0,0,0.08);
   border-top: 4px solid var(--yellow);
   box-shadow: 0 24px 60px rgba(0,0,0,0.12);
 }
@@ -139,7 +139,7 @@ body.light-mode .mega-link:hover { color: var(--green); opacity: 1; }
   cursor: pointer;
 }
 .usecase-card:hover { border-color: var(--yellow); transform: translateY(-5px); box-shadow: 0 20px 50px rgba(255, 190, 60, 0.15); }
-body.light-mode .usecase-card { background: var(--grey); border: 1px solid #E5EAF0; }
+body.light-mode .usecase-card { background: var(--grey); border: 1px solid rgba(0,0,0,0.08); }
 
 /* Benefit grid */
 .benefit-card {
@@ -150,13 +150,13 @@ body.light-mode .usecase-card { background: var(--grey); border: 1px solid #E5EA
   transition: border-color 0.2s, background 0.2s, transform 0.2s;
 }
 .benefit-card:hover { border-color: rgba(255, 190, 60, 0.35); background: rgba(255,255,255,0.04); transform: translateY(-3px); }
-body.light-mode .benefit-card { background: #FFFFFF; border: 1px solid #E5EAF0; }
+body.light-mode .benefit-card { background: #FFFFFF; border: 1px solid rgba(0,0,0,0.08); }
 body.light-mode .benefit-card:hover { border-color: var(--yellow); background: var(--grey); }
 
 /* FAQ */
 .faq-item { border: 1px solid var(--border-dark); border-radius: 16px; overflow: hidden; margin-bottom: 12px; transition: border-color 0.2s; }
 .faq-item.open { border-color: var(--yellow); }
-body.light-mode .faq-item { border: 1px solid #E5EAF0; background: #FFFFFF; }
+body.light-mode .faq-item { border: 1px solid rgba(0,0,0,0.08); background: #FFFFFF; }
 
 /* Testimonials */
 .testimonial-card {
@@ -170,7 +170,7 @@ body.light-mode .faq-item { border: 1px solid #E5EAF0; background: #FFFFFF; }
   transition: transform 0.2s, box-shadow 0.2s;
 }
 .testimonial-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.3); }
-body.light-mode .testimonial-card { background: #FFFFFF; border: 1px solid #E5EAF0; box-shadow: 0 4px 12px rgba(0,0,0,0.04); }
+body.light-mode .testimonial-card { background: #FFFFFF; border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 4px 12px rgba(0,0,0,0.04); }
 
 /* Hero bg */
 .hero-bg {
@@ -193,7 +193,7 @@ body.light-mode .hero-bg::before {
 
 /* Dashboard mock */
 .dash-card { background: var(--navy); border: 1px solid var(--border-dark); border-radius: 20px; padding: 24px; }
-body.light-mode .dash-card { background: #FFFFFF; border: 1px solid #E5EAF0; box-shadow: 0 8px 30px rgba(0,0,0,0.06); }
+body.light-mode .dash-card { background: #FFFFFF; border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 8px 30px rgba(0,0,0,0.06); }
 
 .prog-track { height: 8px; background: rgba(255,255,255,0.08); border-radius: 999px; overflow: hidden; }
 body.light-mode .prog-track { background: var(--grey); }
@@ -254,7 +254,7 @@ body.light-mode .text-secondary { color: rgba(0,0,0,0.8); }
 body.light-mode .section-label { color: var(--black); }
 
 .section-rule { height: 1px; background: linear-gradient(90deg, transparent, var(--border-dark) 20%, var(--border-dark) 80%, transparent); }
-body.light-mode .section-rule { background: linear-gradient(90deg, transparent, #E5EAF0 20%, #E5EAF0 80%, transparent); }
+body.light-mode .section-rule { background: linear-gradient(90deg, transparent, rgba(0,0,0,0.08) 20%, rgba(0,0,0,0.08) 80%, transparent); }
 
 .wa-widget { position: fixed; bottom: 24px; right: 24px; z-index: 999; }
 .wa-btn { width:56px; height:56px; border-radius:50%; background:#25D366; display:flex; align-items:center; justify-content:center; box-shadow:0 8px 30px rgba(37,211,102,0.4); cursor:pointer; transition:transform 0.2s,box-shadow 0.2s; border:none; }

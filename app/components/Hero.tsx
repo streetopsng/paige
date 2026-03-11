@@ -6,15 +6,15 @@ interface HeroProps { isDark: boolean; }
 const logos = ["FinServe","TechBridge","Meridian","Apex Group","Pinnacle","DataCore","Orbit HR","PeopleCo","NexaGroup","StrataCorp"];
 
 const usecaseCards = [
-  { icon:"🏢", color:"#00B2A9", title:"For Organisations", desc:"Reduce attrition and build a data-driven culture that attracts and retains top talent.", href:"#companies" },
-  { icon:"📋", color:"#7B5CF5", title:"For HR Teams", desc:"Replace slow annual surveys with real-time, continuous engagement intelligence.", href:"#hr-teams" },
-  { icon:"👥", color:"#FF6640", title:"For Team Leads", desc:"Know your team's mood and morale before issues escalate into crises.", href:"#team-leads" },
-  { icon:"🙋", color:"#00B2A9", title:"For Team Members", desc:"Share how you truly feel, anonymously — and watch leadership take action.", href:"#team-members" },
+  { icon:"🏢", color:"var(--yellow)", title:"For Organisations", desc:"Reduce attrition and build a data-driven culture that attracts and retains top talent.", href:"#companies" },
+  { icon:"📋", color:"var(--blue)", title:"For HR Teams", desc:"Replace slow annual surveys with real-time, continuous engagement intelligence.", href:"#hr-teams" },
+  { icon:"👥", color:"var(--red)", title:"For Team Leads", desc:"Know your team's mood and morale before issues escalate into crises.", href:"#team-leads" },
+  { icon:"🙋", color:"var(--yellow)", title:"For Team Members", desc:"Share how you truly feel, anonymously — and watch leadership take action.", href:"#team-members" },
 ];
 
 export default function Hero({ isDark }: HeroProps) {
-  const tc = isDark ? "text-white" : "text-[#060D1B]";
-  const ts = isDark ? "text-[#94A8C4]" : "text-[#475569]";
+  const tc = isDark ? "text-white" : "text-[var(--black)]";
+  const ts = isDark ? "text-[rgba(255,255,255,0.6)]" : "text-[rgba(0,0,0,0.6)]";
 
   return (
     <section className="hero-bg" style={{ paddingTop: 80, paddingBottom: 0 }}>
@@ -55,23 +55,23 @@ export default function Hero({ isDark }: HeroProps) {
             {/* Header bar */}
             <div style={{ background: "linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.05))", padding: "14px 20px", display: "flex", alignItems: "center", gap: 8, borderBottom: "1px solid var(--border-dark)" }}>
               <div style={{ display: "flex", gap: 6 }}>
-                {["#FF5F57","#FFBD2E","#28C840"].map((c) => <div key={c} style={{ width: 12, height: 12, borderRadius: "50%", background: c }} />)}
+                {["var(--red)","var(--yellow)","var(--green)"].map((c) => <div key={c} style={{ width: 12, height: 12, borderRadius: "50%", background: c }} />)}
               </div>
               <div style={{ flex: 1, height: 28, background: "rgba(255,255,255,0.05)", borderRadius: 6, marginLeft: 8, display: "flex", alignItems: "center", paddingLeft: 12 }}>
                 <span style={{ fontSize: 11, color: "var(--white)", fontFamily: "monospace" }}>app.paige.ai/dashboard</span>
               </div>
             </div>
             {/* Dashboard body */}
-            <div style={{ padding: "24px", background: isDark ? "var(--navy)" : "#F8FAFD" }}>
+            <div style={{ padding: "24px", background: isDark ? "var(--navy)" : "var(--grey)" }}>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 16, marginBottom: 20 }}>
                 {[
-                  { label: "Overall Engagement", value: "78%", delta: "+6%", icon: <BarChart2 size={16} />, color: "#00B2A9" },
-                  { label: "Active Team Members", value: "24/26", delta: "92%", icon: <Users size={16} />, color: "#7B5CF5" },
-                  { label: "Trend (4 weeks)", value: "↑ 12pts", delta: "improving", icon: <TrendingUp size={16} />, color: "#FF6640" },
+                  { label: "Overall Engagement", value: "78%", delta: "+6%", icon: <BarChart2 size={16} />, color: "var(--yellow)" },
+                  { label: "Active Team Members", value: "24/26", delta: "92%", icon: <Users size={16} />, color: "var(--blue)" },
+                  { label: "Trend (4 weeks)", value: "↑ 12pts", delta: "improving", icon: <TrendingUp size={16} />, color: "var(--red)" },
                 ].map((s) => (
                   <div key={s.label} className="dash-card" style={{ textAlign: "center", padding: "16px 12px" }}>
                     <div style={{ display: "flex", justifyContent: "center", marginBottom: 8, color: s.color }}>{s.icon}</div>
-                    <div style={{ fontSize: 22, fontWeight: 800, fontFamily: "DM Sans,sans-serif", color: isDark ? "white" : "#060D1B", lineHeight: 1 }}>{s.value}</div>
+                    <div style={{ fontSize: 22, fontWeight: 800, fontFamily: "DM Sans,sans-serif", color: isDark ? "white" : "var(--black)", lineHeight: 1 }}>{s.value}</div>
                     <div style={{ fontSize: 10, color: "var(--white)", marginTop: 4, marginBottom: 2 }}>{s.label}</div>
                     <div style={{ fontSize: 11, fontWeight: 600, color: s.color }}>{s.delta}</div>
                   </div>
@@ -79,22 +79,22 @@ export default function Hero({ isDark }: HeroProps) {
               </div>
               <div className="dash-card" style={{ padding: "20px 24px" }}>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 16 }}>
-                  <span style={{ fontSize: 13, fontWeight: 700, fontFamily: "DM Sans,sans-serif", color: isDark ? "white" : "#060D1B" }}>Engagement Dimensions — Engineering Team</span>
-                  <span style={{ fontSize: 11, color: "var(--yellow)", fontWeight: 600, background: "rgba(0,178,169,0.1)", padding: "3px 10px", borderRadius: 100 }}>Week 12</span>
+                  <span style={{ fontSize: 13, fontWeight: 700, fontFamily: "DM Sans,sans-serif", color: isDark ? "white" : "var(--black)" }}>Engagement Dimensions — Engineering Team</span>
+                  <span style={{ fontSize: 11, color: "var(--yellow)", fontWeight: 600, background: "rgba(255,190,60,0.1)", padding: "3px 10px", borderRadius: 100 }}>Week 12</span>
                 </div>
                 <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
                   {[
-                    { label: "Psychological Safety", value: 84, color: "#00B2A9" },
-                    { label: "Workload Balance", value: 61, color: "#FF6640" },
-                    { label: "Recognition & Growth", value: 73, color: "#7B5CF5" },
-                    { label: "Team Cohesion", value: 91, color: "#00B2A9" },
-                    { label: "Role Clarity", value: 79, color: "#7B5CF5" },
-                    { label: "Career Development", value: 68, color: "#FF6640" },
+                    { label: "Psychological Safety", value: 84, color: "var(--yellow)" },
+                    { label: "Workload Balance", value: 61, color: "var(--red)" },
+                    { label: "Recognition & Growth", value: 73, color: "var(--blue)" },
+                    { label: "Team Cohesion", value: 91, color: "var(--yellow)" },
+                    { label: "Role Clarity", value: 79, color: "var(--blue)" },
+                    { label: "Career Development", value: 68, color: "var(--red)" },
                   ].map((d) => (
                     <div key={d.label}>
                       <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 5 }}>
-                        <span style={{ fontSize: 12, color: isDark ? "var(--white)" : "#475569", fontWeight: 500 }}>{d.label}</span>
-                        <span style={{ fontSize: 12, fontWeight: 700, color: isDark ? "white" : "#060D1B" }}>{d.value}%</span>
+                        <span style={{ fontSize: 12, color: isDark ? "var(--white)" : "rgba(0,0,0,0.6)", fontWeight: 500 }}>{d.label}</span>
+                        <span style={{ fontSize: 12, fontWeight: 700, color: isDark ? "white" : "var(--black)" }}>{d.value}%</span>
                       </div>
                       <div className="prog-track">
                         <div className="prog-fill" style={{ width: `${d.value}%`, background: d.color }} />
@@ -107,15 +107,15 @@ export default function Hero({ isDark }: HeroProps) {
           </div>
 
           {/* Floating notification chips */}
-          <div style={{ position: "absolute", top: 80, right: -20, background: isDark ? "rgba(255,255,255,0.03)" : "white", border: "1px solid rgba(0,178,169,0.3)", borderRadius: 14, padding: "10px 14px", boxShadow: "0 12px 30px rgba(0,0,0,0.25)", maxWidth: 180 }} className="hide-mobile">
+          <div style={{ position: "absolute", top: 80, right: -20, background: isDark ? "rgba(255,255,255,0.03)" : "white", border: "1px solid rgba(255,190,60,0.3)", borderRadius: 14, padding: "10px 14px", boxShadow: "0 12px 30px rgba(0,0,0,0.25)", maxWidth: 180 }} className="hide-mobile">
             <div style={{ fontSize: 10, color: "var(--yellow)", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 4 }}>🔔 Alert</div>
-            <div style={{ fontSize: 12, color: isDark ? "white" : "#060D1B", fontWeight: 600 }}>Workload score dropped</div>
+            <div style={{ fontSize: 12, color: isDark ? "white" : "var(--black)", fontWeight: 600 }}>Workload score dropped</div>
             <div style={{ fontSize: 11, color: "var(--white)" }}>Action recommended</div>
           </div>
 
-          <div style={{ position: "absolute", bottom: 100, left: -20, background: isDark ? "rgba(255,255,255,0.03)" : "white", border: "1px solid rgba(123,92,245,0.3)", borderRadius: 14, padding: "10px 14px", boxShadow: "0 12px 30px rgba(0,0,0,0.25)", maxWidth: 180 }} className="hide-mobile">
-            <div style={{ fontSize: 10, color: "#7B5CF5", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 4 }}>✅ Pulse Complete</div>
-            <div style={{ fontSize: 12, color: isDark ? "white" : "#060D1B", fontWeight: 600 }}>24 responses in</div>
+          <div style={{ position: "absolute", bottom: 100, left: -20, background: isDark ? "rgba(255,255,255,0.03)" : "white", border: "1px solid rgba(58,167,234,0.3)", borderRadius: 14, padding: "10px 14px", boxShadow: "0 12px 30px rgba(0,0,0,0.25)", maxWidth: 180 }} className="hide-mobile">
+            <div style={{ fontSize: 10, color: "var(--blue)", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 4 }}>✅ Pulse Complete</div>
+            <div style={{ fontSize: 12, color: isDark ? "white" : "var(--black)", fontWeight: 600 }}>24 responses in</div>
             <div style={{ fontSize: 11, color: "var(--white)" }}>92% participation</div>
           </div>
         </div>
@@ -150,7 +150,7 @@ export default function Hero({ isDark }: HeroProps) {
                   {c.title}
                 </div>
                 <h3 className={tc} style={{ fontFamily: "DM Sans,sans-serif", fontWeight: 700, fontSize: 18, margin: "0 0 10px", lineHeight: 1.3 }}>{c.title}</h3>
-                <p className={`${isDark ? "text-[#94A8C4]" : "text-[#475569]"}`} style={{ fontSize: 14, lineHeight: 1.6, margin: 0 }}>{c.desc}</p>
+                <p className={`${isDark ? "text-[rgba(255,255,255,0.6)]" : "text-[rgba(0,0,0,0.6)]"}`} style={{ fontSize: 14, lineHeight: 1.6, margin: 0 }}>{c.desc}</p>
                 <div style={{ marginTop: 16, color: c.color, fontSize: 13, fontWeight: 600, display: "flex", alignItems: "center", gap: 4 }}>
                   Learn more <ArrowRight size={13} />
                 </div>

@@ -14,18 +14,18 @@ const steps = [
 ];
 
 const roleColors: Record<string, string> = {
-  "Team Lead": "#FF6640",
-  "Team Lead / HR": "#7B5CF5",
-  "Team Member": "#00B2A9",
-  "All": "#00B2A9",
+  "Team Lead": "var(--red)",
+  "Team Lead / HR": "var(--blue)",
+  "Team Member": "var(--yellow)",
+  "All": "var(--yellow)",
 };
 
 export default function HowItWorks({ isDark }: { isDark: boolean }) {
-  const bg = isDark ? "var(--navy)" : "#F4F6FA";
+  const bg = isDark ? "var(--navy)" : "var(--grey)";
   const cardBg = isDark ? "rgba(255,255,255,0.03)" : "#FFFFFF";
-  const border = isDark ? "1px solid var(--border-dark)" : "1px solid #E5EAF0";
-  const tc = isDark ? "white" : "#060D1B";
-  const ts = isDark ? "#94A8C4" : "#475569";
+  const border = isDark ? "1px solid var(--border-dark)" : "1px solid rgba(0,0,0,0.08)";
+  const tc = isDark ? "white" : "var(--black)";
+  const ts = isDark ? "rgba(255,255,255,0.6)" : "rgba(0,0,0,0.6)";
 
   return (
     <section id="how-it-works" style={{ background: bg, padding: "96px 0" }}>
@@ -46,11 +46,11 @@ export default function HowItWorks({ isDark }: { isDark: boolean }) {
             <div key={step.step} style={{ display: "flex", gap: 28, marginBottom: idx < steps.length - 1 ? 8 : 0 }}>
               {/* Left: number + line */}
               <div style={{ display: "flex", flexDirection: "column", alignItems: "center", flexShrink: 0 }}>
-                <div style={{ width: 48, height: 48, borderRadius: "50%", background: "var(--yellow)", color: "white", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 900, fontSize: 15, fontFamily: "DM Sans,sans-serif", boxShadow: "0 0 20px rgba(0,178,169,0.35)", zIndex: 2 }}>
+                <div style={{ width: 48, height: 48, borderRadius: "50%", background: "var(--yellow)", color: "white", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 900, fontSize: 15, fontFamily: "DM Sans,sans-serif", boxShadow: "0 0 20px rgba(255,190,60,0.35)", zIndex: 2 }}>
                   {step.step}
                 </div>
                 {idx < steps.length - 1 && (
-                  <div style={{ width: 2, flex: 1, minHeight: 32, background: "linear-gradient(to bottom, var(--yellow), rgba(0,178,169,0.1))", margin: "4px 0" }} />
+                  <div style={{ width: 2, flex: 1, minHeight: 32, background: "linear-gradient(to bottom, var(--yellow), rgba(255,190,60,0.1))", margin: "4px 0" }} />
                 )}
               </div>
               {/* Right: card */}

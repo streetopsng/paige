@@ -7,16 +7,16 @@ export function EarlyAccessCTA({ isDark }: { isDark: boolean }) {
   const [email, setEmail] = useState("");
   const [role, setRole] = useState("");
   const [submitted, setSubmitted] = useState(false);
-  const ts = isDark ? "#94A8C4" : "#475569";
+  const ts = isDark ? "rgba(255,255,255,0.6)" : "rgba(0,0,0,0.6)";
 
   return (
-    <section id="early-access" style={{ background: isDark ? "var(--navy)" : "#F8FAFD", padding: "96px 0" }}>
+    <section id="early-access" style={{ background: isDark ? "var(--navy)" : "var(--grey)", padding: "96px 0" }}>
       <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 24px" }}>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, alignItems: "center" }}>
           {/* Left: copy */}
           <div>
             <div className="section-label">🚀 Beta Access — Limited Spots</div>
-            <h2 style={{ fontFamily: "DM Sans,sans-serif", fontWeight: 900, fontSize: "clamp(28px, 4vw, 48px)", color: isDark ? "white" : "#060D1B", margin: "0 0 20px", letterSpacing: "-0.03em", lineHeight: 1.1 }}>
+            <h2 style={{ fontFamily: "DM Sans,sans-serif", fontWeight: 900, fontSize: "clamp(28px, 4vw, 48px)", color: isDark ? "white" : "var(--black)", margin: "0 0 20px", letterSpacing: "-0.03em", lineHeight: 1.1 }}>
               Be first to experience<br /><span style={{ color: "var(--yellow)" }}>Paige by StreetOps.</span>
             </h2>
             <p style={{ fontSize: 17, color: ts, lineHeight: 1.7, marginBottom: 32 }}>
@@ -25,7 +25,7 @@ export function EarlyAccessCTA({ isDark }: { isDark: boolean }) {
             <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
               {["Free to use during the beta period","No credit card required","Direct access to the StreetOps team","Founder pricing locked for 12 months post-launch"].map((pt) => (
                 <div key={pt} style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                  <div style={{ width: 20, height: 20, borderRadius: "50%", background: "rgba(0,178,169,0.15)", border: "1px solid rgba(0,178,169,0.3)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                  <div style={{ width: 20, height: 20, borderRadius: "50%", background: "rgba(0,178,169,0.15)", border: "1px solid rgba(255,190,60,0.3)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
                     <span style={{ fontSize: 10, color: "var(--yellow)" }}>✓</span>
                   </div>
                   <span style={{ fontSize: 14, color: ts }}>{pt}</span>
@@ -35,24 +35,24 @@ export function EarlyAccessCTA({ isDark }: { isDark: boolean }) {
           </div>
 
           {/* Right: form */}
-          <div style={{ background: isDark ? "rgba(255,255,255,0.03)" : "white", border: isDark ? "1px solid var(--border-dark)" : "1px solid #E5EAF0", borderRadius: 24, padding: "40px 36px", boxShadow: "0 24px 60px rgba(0,0,0,0.12)" }}>
+          <div style={{ background: isDark ? "rgba(255,255,255,0.03)" : "white", border: isDark ? "1px solid var(--border-dark)" : "1px solid rgba(0,0,0,0.08)", borderRadius: 24, padding: "40px 36px", boxShadow: "0 24px 60px rgba(0,0,0,0.12)" }}>
             {!submitted ? (
               <>
-                <h3 style={{ fontFamily: "DM Sans,sans-serif", fontWeight: 800, fontSize: 22, color: isDark ? "white" : "#060D1B", margin: "0 0 8px" }}>Request Early Access</h3>
+                <h3 style={{ fontFamily: "DM Sans,sans-serif", fontWeight: 800, fontSize: 22, color: isDark ? "white" : "var(--black)", margin: "0 0 8px" }}>Request Early Access</h3>
                 <p style={{ fontSize: 14, color: ts, marginBottom: 28 }}>We'll reach out with your onboarding details within 48 hours.</p>
                 <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
                   <input
                     type="email" placeholder="Work email address" value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    style={{ width: "100%", padding: "13px 16px", borderRadius: 10, border: isDark ? "1px solid var(--border-dark)" : "1px solid #CBD5E1", background: isDark ? "rgba(255,255,255,0.05)" : "white", color: isDark ? "white" : "#060D1B", fontSize: 14, outline: "none", fontFamily: "Inter,sans-serif" }}
+                    style={{ width: "100%", padding: "13px 16px", borderRadius: 10, border: isDark ? "1px solid var(--border-dark)" : "1px solid rgba(0,0,0,0.08)", background: isDark ? "rgba(255,255,255,0.05)" : "white", color: isDark ? "white" : "var(--black)", fontSize: 14, outline: "none", fontFamily: "Inter,sans-serif" }}
                   />
                   <input
                     type="text" placeholder="Your name" 
-                    style={{ width: "100%", padding: "13px 16px", borderRadius: 10, border: isDark ? "1px solid var(--border-dark)" : "1px solid #CBD5E1", background: isDark ? "rgba(255,255,255,0.05)" : "white", color: isDark ? "white" : "#060D1B", fontSize: 14, outline: "none", fontFamily: "Inter,sans-serif" }}
+                    style={{ width: "100%", padding: "13px 16px", borderRadius: 10, border: isDark ? "1px solid var(--border-dark)" : "1px solid rgba(0,0,0,0.08)", background: isDark ? "rgba(255,255,255,0.05)" : "white", color: isDark ? "white" : "var(--black)", fontSize: 14, outline: "none", fontFamily: "Inter,sans-serif" }}
                   />
                   <select
                     value={role} onChange={(e) => setRole(e.target.value)}
-                    style={{ width: "100%", padding: "13px 16px", borderRadius: 10, border: isDark ? "1px solid var(--border-dark)" : "1px solid #CBD5E1", background: isDark ? "var(--navy)" : "white", color: role ? (isDark ? "white" : "#060D1B") : "var(--white)", fontSize: 14, outline: "none", fontFamily: "Inter,sans-serif" }}
+                    style={{ width: "100%", padding: "13px 16px", borderRadius: 10, border: isDark ? "1px solid var(--border-dark)" : "1px solid rgba(0,0,0,0.08)", background: isDark ? "var(--navy)" : "white", color: role ? (isDark ? "white" : "var(--black)") : "var(--white)", fontSize: 14, outline: "none", fontFamily: "Inter,sans-serif" }}
                   >
                     <option value="">I am a…</option>
                     <option value="company">Company Executive / Founder</option>
@@ -62,7 +62,7 @@ export function EarlyAccessCTA({ isDark }: { isDark: boolean }) {
                   </select>
                   <input
                     type="text" placeholder="Company name"
-                    style={{ width: "100%", padding: "13px 16px", borderRadius: 10, border: isDark ? "1px solid var(--border-dark)" : "1px solid #CBD5E1", background: isDark ? "rgba(255,255,255,0.05)" : "white", color: isDark ? "white" : "#060D1B", fontSize: 14, outline: "none", fontFamily: "Inter,sans-serif" }}
+                    style={{ width: "100%", padding: "13px 16px", borderRadius: 10, border: isDark ? "1px solid var(--border-dark)" : "1px solid rgba(0,0,0,0.08)", background: isDark ? "rgba(255,255,255,0.05)" : "white", color: isDark ? "white" : "var(--black)", fontSize: 14, outline: "none", fontFamily: "Inter,sans-serif" }}
                   />
                   <button
                     onClick={() => { if (email && role) setSubmitted(true); }}
@@ -78,7 +78,7 @@ export function EarlyAccessCTA({ isDark }: { isDark: boolean }) {
             ) : (
               <div style={{ textAlign: "center", padding: "20px 0" }}>
                 <div style={{ fontSize: 52, marginBottom: 16 }}>🎉</div>
-                <h3 style={{ fontFamily: "DM Sans,sans-serif", fontWeight: 800, fontSize: 22, color: isDark ? "white" : "#060D1B", margin: "0 0 12px" }}>You're on the list!</h3>
+                <h3 style={{ fontFamily: "DM Sans,sans-serif", fontWeight: 800, fontSize: 22, color: isDark ? "white" : "var(--black)", margin: "0 0 12px" }}>You're on the list!</h3>
                 <p style={{ fontSize: 15, color: ts, lineHeight: 1.6 }}>We'll be in touch within 48 hours with your early access details. Welcome to the future of team engagement.</p>
               </div>
             )}
@@ -92,7 +92,7 @@ export function EarlyAccessCTA({ isDark }: { isDark: boolean }) {
 /* ── Team Lead CTA Band ── */
 export function TeamLeadCTA({ isDark }: { isDark: boolean }) {
   return (
-    <section style={{ padding: "80px 0", background: "linear-gradient(135deg, #006B66 0%, #00B2A9 50%, #00D9CF 100%)" }}>
+    <section style={{ padding: "80px 0", background: "linear-gradient(135deg, var(--green) 0%, var(--yellow) 50%, var(--blue) 100%)" }}>
       <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 24px", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", position: "relative" }}>
         <div style={{ position: "absolute", top: -40, right: 80, width: 200, height: 200, borderRadius: "50%", background: "rgba(255,255,255,0.05)" }} />
         <div style={{ position: "absolute", bottom: -60, left: 40, width: 160, height: 160, borderRadius: "50%", background: "rgba(255,255,255,0.05)" }} />
@@ -103,7 +103,7 @@ export function TeamLeadCTA({ isDark }: { isDark: boolean }) {
         <p style={{ fontSize: 17, color: "rgba(255,255,255,0.8)", maxWidth: 560, margin: "0 0 36px", lineHeight: 1.65 }}>
           Stop leading blind. Join team leads using Paige to build teams that are engaged, performing, and built to last.
         </p>
-        <a href="#early-access" style={{ display: "inline-flex", alignItems: "center", gap: 10, padding: "15px 32px", background: "white", color: "#006B66", fontWeight: 700, fontSize: 15, borderRadius: 10, textDecoration: "none", fontFamily: "DM Sans,sans-serif", transition: "transform 0.2s, box-shadow 0.2s", boxShadow: "0 8px 30px rgba(0,0,0,0.2)" }}>
+        <a href="#early-access" style={{ display: "inline-flex", alignItems: "center", gap: 10, padding: "15px 32px", background: "white", color: "var(--green)", fontWeight: 700, fontSize: 15, borderRadius: 10, textDecoration: "none", fontFamily: "DM Sans,sans-serif", transition: "transform 0.2s, box-shadow 0.2s", boxShadow: "0 8px 30px rgba(0,0,0,0.2)" }}>
           Join as a Team Lead <ArrowRight size={16} />
         </a>
       </div>
@@ -134,10 +134,10 @@ export function WhatsAppWidget() {
           </div>
           <div style={{ padding: "16px", background: "#ECE5DD" }}>
             <div style={{ background: "white", borderRadius: "0 12px 12px 12px", padding: "10px 14px", marginBottom: 14, boxShadow: "0 2px 6px rgba(0,0,0,0.1)" }}>
-              <p style={{ fontSize: 13.5, color: "#1A1A1A", margin: 0, lineHeight: 1.5 }}>
+              <p style={{ fontSize: 13.5, color: "var(--black)", margin: 0, lineHeight: 1.5 }}>
                 👋 Hi there! I'm here to help you learn more about Paige. Ask me anything about the platform, pricing, or getting early access!
               </p>
-              <p style={{ fontSize: 11, color: "#888", margin: "6px 0 0", textAlign: "right" }}>Just now ✓✓</p>
+              <p style={{ fontSize: 11, color: "rgba(0,0,0,0.6)", margin: "6px 0 0", textAlign: "right" }}>Just now ✓✓</p>
             </div>
             <a
               href="https://wa.me/2348000000000?text=Hi%2C%20I%27d%20like%20to%20learn%20more%20about%20Paige%20by%20StreetOps"
@@ -153,7 +153,7 @@ export function WhatsAppWidget() {
       {!isOpen && showBubble && (
         <div style={{ background: "white", borderRadius: 14, boxShadow: "0 8px 24px rgba(0,0,0,0.15)", padding: "10px 14px", maxWidth: 200, position: "relative" }}>
           <button onClick={() => setShowBubble(false)} style={{ position: "absolute", top: -8, right: -8, width: 20, height: 20, borderRadius: "50%", background: "#9CA3AF", border: "none", cursor: "pointer", color: "white", fontSize: 11, display: "flex", alignItems: "center", justifyContent: "center" }}>×</button>
-          <p style={{ fontSize: 12.5, color: "#374151", margin: 0, fontWeight: 500 }}>💬 Questions? Chat with us!</p>
+          <p style={{ fontSize: 12.5, color: "var(--black)", margin: 0, fontWeight: 500 }}>💬 Questions? Chat with us!</p>
         </div>
       )}
 
@@ -190,21 +190,21 @@ export function Footer({ isDark }: { isDark: boolean }) {
   };
 
   return (
-    <footer id="contact" style={{ background: "#040A15", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
+    <footer id="contact" style={{ background: "var(--navy)", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
       <div style={{ maxWidth: 1280, margin: "0 auto", padding: "64px 24px 32px" }}>
         <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr 1fr", gap: 48, marginBottom: 56 }}>
           {/* Brand column */}
           <div>
             <a href="#" style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none", marginBottom: 20 }}>
-              <div style={{ width: 36, height: 36, borderRadius: 10, background: "linear-gradient(135deg, #00B2A9, #007A75)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+              <div style={{ width: 36, height: 36, borderRadius: 10, background: "var(--yellow)", display: "flex", alignItems: "center", justifyContent: "center" }}>
                 <span style={{ color: "white", fontWeight: 900, fontSize: 18, fontFamily: "DM Sans,sans-serif" }}>P</span>
               </div>
               <div>
                 <div style={{ color: "white", fontFamily: "DM Sans,sans-serif", fontWeight: 800, fontSize: 20, lineHeight: 1 }}>Paige</div>
-                <div style={{ color: "#6B80A0", fontSize: 10, letterSpacing: "0.06em" }}>by StreetOps</div>
+                <div style={{ color: "rgba(0,0,0,0.6)", fontSize: 10, letterSpacing: "0.06em" }}>by StreetOps</div>
               </div>
             </a>
-            <p style={{ fontSize: 14, color: "#6B80A0", lineHeight: 1.7, maxWidth: 300, marginBottom: 24 }}>
+            <p style={{ fontSize: 14, color: "rgba(0,0,0,0.6)", lineHeight: 1.7, maxWidth: 300, marginBottom: 24 }}>
               Paige is the team engagement intelligence platform helping organisations build high-performing, psychologically safe teams — one pulse check at a time.
             </p>
             <div style={{ display: "flex", gap: 10 }}>
@@ -213,7 +213,7 @@ export function Footer({ isDark }: { isDark: boolean }) {
                 { label: "Tw", href: "#" },
                 { label: "Ig", href: "#" },
               ].map((s) => (
-                <a key={s.label} href={s.href} style={{ width: 36, height: 36, borderRadius: 8, border: "1px solid rgba(255,255,255,0.1)", display: "flex", alignItems: "center", justifyContent: "center", color: "#6B80A0", fontSize: 12, fontWeight: 700, textDecoration: "none", transition: "background 0.2s, color 0.2s" }}>
+                <a key={s.label} href={s.href} style={{ width: 36, height: 36, borderRadius: 8, border: "1px solid rgba(255,255,255,0.1)", display: "flex", alignItems: "center", justifyContent: "center", color: "rgba(0,0,0,0.6)", fontSize: 12, fontWeight: 700, textDecoration: "none", transition: "background 0.2s, color 0.2s" }}>
                   {s.label}
                 </a>
               ))}
@@ -227,9 +227,9 @@ export function Footer({ isDark }: { isDark: boolean }) {
               <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 12 }}>
                 {links.map((link) => (
                   <li key={link.label}>
-                    <a href={link.href} style={{ fontSize: 13.5, color: "#6B80A0", textDecoration: "none", transition: "color 0.15s", lineHeight: 1.4, display: "block" }}
-                      onMouseEnter={(e) => (e.currentTarget.style.color = "#00B2A9")}
-                      onMouseLeave={(e) => (e.currentTarget.style.color = "#6B80A0")}
+                    <a href={link.href} style={{ fontSize: 13.5, color: "rgba(0,0,0,0.6)", textDecoration: "none", transition: "color 0.15s", lineHeight: 1.4, display: "block" }}
+                      onMouseEnter={(e) => (e.currentTarget.style.color = "var(--yellow)")}
+                      onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(0,0,0,0.6)")}
                     >{link.label}</a>
                   </li>
                 ))}
@@ -241,14 +241,14 @@ export function Footer({ isDark }: { isDark: boolean }) {
         <div style={{ height: 1, background: "rgba(255,255,255,0.06)", marginBottom: 28 }} />
 
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 16 }}>
-          <p style={{ fontSize: 13, color: "#4A5568", margin: 0 }}>
+          <p style={{ fontSize: 13, color: "var(--black)", margin: 0 }}>
             © {new Date().getFullYear()} StreetOps. All rights reserved. Paige is a product of StreetOps Ltd.
           </p>
           <div style={{ display: "flex", gap: 24 }}>
             {["Privacy Policy","Terms of Use","Cookie Policy"].map((link) => (
-              <a key={link} href="#" style={{ fontSize: 13, color: "#4A5568", textDecoration: "none", transition: "color 0.15s" }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = "#00B2A9")}
-                onMouseLeave={(e) => (e.currentTarget.style.color = "#4A5568")}
+              <a key={link} href="#" style={{ fontSize: 13, color: "var(--black)", textDecoration: "none", transition: "color 0.15s" }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = "var(--yellow)")}
+                onMouseLeave={(e) => (e.currentTarget.style.color = "var(--black)")}
               >{link}</a>
             ))}
           </div>

@@ -1,18 +1,18 @@
 "use client";
 
 const features = [
-  { icon:"📊", color:"#00B2A9", title:"6-Dimension Engagement Scoring",  sub:"Measures psychological safety, workload, recognition, role clarity, team cohesion, and career growth in every pulse check." },
-  { icon:"🔒", color:"#7B5CF5", title:"Anonymous Pulse Checks",           sub:"Anonymity protected by architecture, not just policy — building the trust needed for honest, unfiltered feedback." },
-  { icon:"🤖", color:"#00B2A9", title:"AI Engagement Recommendations",    sub:"Personalised engagement playbooks — not generic tips, but targeted interventions for your team's specific challenges." },
-  { icon:"📈", color:"#FF6640", title:"Trend Analysis & Benchmarks",      sub:"Track engagement week-on-week. Compare against industry benchmarks to know where your team stands globally." },
-  { icon:"🏢", color:"#7B5CF5", title:"Org-Wide Dashboard",               sub:"HR leaders get an aggregated view across all teams and departments from a single, powerful dashboard." },
-  { icon:"⚡", color:"#00B2A9", title:"2-Minute Weekly Cadence",          sub:"Pulse checks are short by design. No survey fatigue, no dropped participation after week 3." },
-  { icon:"📱", color:"#FF6640", title:"Mobile-First Experience",          sub:"Pulse checks work seamlessly on any device. No app download required — just a link from any browser." },
-  { icon:"🎯", color:"#7B5CF5", title:"Custom Engagement Frameworks",     sub:"Customise question sets and dimensions to align with specific culture initiatives or business objectives." },
-  { icon:"🔔", color:"#00B2A9", title:"Automated Reminders & Nudges",    sub:"Gentle, configurable reminders ensure high participation rates. Paige nudges without nagging." },
-  { icon:"📑", color:"#FF6640", title:"Exportable Reports",              sub:"Generate and export polished engagement reports for board presentations or leadership reviews in one click." },
-  { icon:"🔗", color:"#7B5CF5", title:"Integration Ready",              sub:"Integrates with Slack, Teams, and major HRIS platforms. Coming in Phase 2 of the beta." },
-  { icon:"🌍", color:"#00B2A9", title:"GDPR & Data Compliance",         sub:"Enterprise-grade data protection. GDPR compliant, SOC2 in progress. Your team's data stays yours." },
+  { icon:"📊", color:"var(--yellow)", title:"6-Dimension Engagement Scoring",  sub:"Measures psychological safety, workload, recognition, role clarity, team cohesion, and career growth in every pulse check." },
+  { icon:"🔒", color:"var(--blue)", title:"Anonymous Pulse Checks",           sub:"Anonymity protected by architecture, not just policy — building the trust needed for honest, unfiltered feedback." },
+  { icon:"🤖", color:"var(--yellow)", title:"AI Engagement Recommendations",    sub:"Personalised engagement playbooks — not generic tips, but targeted interventions for your team's specific challenges." },
+  { icon:"📈", color:"var(--red)", title:"Trend Analysis & Benchmarks",      sub:"Track engagement week-on-week. Compare against industry benchmarks to know where your team stands globally." },
+  { icon:"🏢", color:"var(--blue)", title:"Org-Wide Dashboard",               sub:"HR leaders get an aggregated view across all teams and departments from a single, powerful dashboard." },
+  { icon:"⚡", color:"var(--yellow)", title:"2-Minute Weekly Cadence",          sub:"Pulse checks are short by design. No survey fatigue, no dropped participation after week 3." },
+  { icon:"📱", color:"var(--red)", title:"Mobile-First Experience",          sub:"Pulse checks work seamlessly on any device. No app download required — just a link from any browser." },
+  { icon:"🎯", color:"var(--blue)", title:"Custom Engagement Frameworks",     sub:"Customise question sets and dimensions to align with specific culture initiatives or business objectives." },
+  { icon:"🔔", color:"var(--yellow)", title:"Automated Reminders & Nudges",    sub:"Gentle, configurable reminders ensure high participation rates. Paige nudges without nagging." },
+  { icon:"📑", color:"var(--red)", title:"Exportable Reports",              sub:"Generate and export polished engagement reports for board presentations or leadership reviews in one click." },
+  { icon:"🔗", color:"var(--blue)", title:"Integration Ready",              sub:"Integrates with Slack, Teams, and major HRIS platforms. Coming in Phase 2 of the beta." },
+  { icon:"🌍", color:"var(--yellow)", title:"GDPR & Data Compliance",         sub:"Enterprise-grade data protection. GDPR compliant, SOC2 in progress. Your team's data stays yours." },
 ];
 
 const marketStats = [
@@ -24,10 +24,10 @@ const marketStats = [
 
 export default function Features({ isDark }: { isDark: boolean }) {
   const bg = isDark ? "var(--navy)" : "#FFFFFF";
-  const altBg = isDark ? "var(--navy)" : "#F4F6FA";
-  const border = isDark ? "1px solid var(--border-dark)" : "1px solid #E5EAF0";
-  const tc = isDark ? "white" : "#060D1B";
-  const ts = isDark ? "#94A8C4" : "#475569";
+  const altBg = isDark ? "var(--navy)" : "var(--grey)";
+  const border = isDark ? "1px solid var(--border-dark)" : "1px solid rgba(0,0,0,0.08)";
+  const tc = isDark ? "white" : "var(--black)";
+  const ts = isDark ? "rgba(255,255,255,0.6)" : "rgba(0,0,0,0.6)";
 
   return (
     <>

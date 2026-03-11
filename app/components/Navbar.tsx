@@ -87,8 +87,8 @@ export default function Navbar({ isDark, toggleTheme }: NavbarProps) {
     document.body.className = isDark ? "" : "light-mode";
   }, [isDark]);
 
-  const tc = isDark ? "text-white" : "text-[#060D1B]";
-  const logoSubColor = isDark ? "text-[#94A8C4]" : "text-[#6B80A0]";
+  const tc = isDark ? "text-white" : "text-[var(--black)]";
+  const logoSubColor = isDark ? "text-[rgba(255,255,255,0.6)]" : "text-[rgba(0,0,0,0.6)]";
 
   return (
     <>
@@ -115,7 +115,7 @@ export default function Navbar({ isDark, toggleTheme }: NavbarProps) {
         <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 24px", display: "flex", alignItems: "center", justifyContent: "space-between", height: 64 }}>
           {/* Logo */}
           <a href="#" style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none" }}>
-            <div style={{ width: 36, height: 36, borderRadius: 10, background: "linear-gradient(135deg, #00B2A9, #007A75)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+            <div style={{ width: 36, height: 36, borderRadius: 10, background: "var(--yellow)", display: "flex", alignItems: "center", justifyContent: "center" }}>
               <span style={{ color: "white", fontWeight: 900, fontSize: 18, fontFamily: "DM Sans,sans-serif" }}>P</span>
             </div>
             <div>
@@ -152,7 +152,7 @@ export default function Navbar({ isDark, toggleTheme }: NavbarProps) {
           <div className="hide-mobile" style={{ display: "flex", alignItems: "center", gap: 12 }}>
             <button
               onClick={toggleTheme}
-              style={{ width: 36, height: 36, borderRadius: 8, border: "1px solid var(--border-dark)", background: "transparent", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", color: isDark ? "white" : "#374151", transition: "background 0.2s" }}
+              style={{ width: 36, height: 36, borderRadius: 8, border: "1px solid var(--border-dark)", background: "transparent", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", color: isDark ? "white" : "var(--black)", transition: "background 0.2s" }}
               aria-label="Toggle theme"
             >
               {isDark ? <Sun size={15} /> : <Moon size={15} />}
@@ -163,10 +163,10 @@ export default function Navbar({ isDark, toggleTheme }: NavbarProps) {
 
           {/* Mobile hamburger */}
           <div style={{ display: "flex", alignItems: "center", gap: 10 }} className="sm-show">
-            <button onClick={toggleTheme} style={{ width: 36, height: 36, borderRadius: 8, border: "1px solid var(--border-dark)", background: "transparent", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", color: isDark ? "white" : "#374151" }}>
+            <button onClick={toggleTheme} style={{ width: 36, height: 36, borderRadius: 8, border: "1px solid var(--border-dark)", background: "transparent", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", color: isDark ? "white" : "var(--black)" }}>
               {isDark ? <Sun size={15} /> : <Moon size={15} />}
             </button>
-            <button onClick={() => setMobileOpen(true)} style={{ width: 36, height: 36, borderRadius: 8, border: "1px solid var(--border-dark)", background: "transparent", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", color: isDark ? "white" : "#374151" }}>
+            <button onClick={() => setMobileOpen(true)} style={{ width: 36, height: 36, borderRadius: 8, border: "1px solid var(--border-dark)", background: "transparent", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", color: isDark ? "white" : "var(--black)" }}>
               <Menu size={18} />
             </button>
           </div>
@@ -178,12 +178,12 @@ export default function Navbar({ isDark, toggleTheme }: NavbarProps) {
         <div style={{ position: "fixed", inset: 0, background: isDark ? "var(--navy)" : "#FFFFFF", zIndex: 200, overflowY: "auto", padding: "20px 24px" }}>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 32 }}>
             <a href="#" style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none" }}>
-              <div style={{ width: 32, height: 32, borderRadius: 8, background: "linear-gradient(135deg, #00B2A9, #007A75)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+              <div style={{ width: 32, height: 32, borderRadius: 8, background: "var(--yellow)", display: "flex", alignItems: "center", justifyContent: "center" }}>
                 <span style={{ color: "white", fontWeight: 900, fontSize: 16, fontFamily: "DM Sans,sans-serif" }}>P</span>
               </div>
               <span className={tc} style={{ fontFamily: "DM Sans,sans-serif", fontWeight: 800, fontSize: 18 }}>Paige</span>
             </a>
-            <button onClick={() => setMobileOpen(false)} style={{ width: 36, height: 36, borderRadius: 8, border: "1px solid var(--border-dark)", background: "transparent", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", color: isDark ? "white" : "#374151" }}>
+            <button onClick={() => setMobileOpen(false)} style={{ width: 36, height: 36, borderRadius: 8, border: "1px solid var(--border-dark)", background: "transparent", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", color: isDark ? "white" : "var(--black)" }}>
               <X size={18} />
             </button>
           </div>

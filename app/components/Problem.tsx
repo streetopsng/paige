@@ -3,38 +3,38 @@
 interface ProblemProps { isDark: boolean; }
 
 const marketStats = [
-  { value: "$8.8T", label: "Lost globally to disengagement each year", source: "Gallup 2023", color: "#FF6640" },
-  { value: "85%", label: "Of employees are disengaged at work worldwide", source: "Gallup 2023", color: "#7B5CF5" },
-  { value: "18%", label: "Productivity loss from actively disengaged staff", source: "Gallup", color: "#FF6640" },
-  { value: "51%", label: "Of employees are actively job searching right now", source: "Gallup", color: "#00B2A9" },
-  { value: "58%", label: "Of voluntary departures cite poor culture", source: "SHRM", color: "#7B5CF5" },
-  { value: "$11.3K", label: "Average cost to replace a mid-level employee", source: "SHRM 2023", color: "#00B2A9" },
+  { value: "$8.8T", label: "Lost globally to disengagement each year", source: "Gallup 2023", color: "var(--red)" },
+  { value: "85%", label: "Of employees are disengaged at work worldwide", source: "Gallup 2023", color: "var(--blue)" },
+  { value: "18%", label: "Productivity loss from actively disengaged staff", source: "Gallup", color: "var(--red)" },
+  { value: "51%", label: "Of employees are actively job searching right now", source: "Gallup", color: "var(--yellow)" },
+  { value: "58%", label: "Of voluntary departures cite poor culture", source: "SHRM", color: "var(--blue)" },
+  { value: "$11.3K", label: "Average cost to replace a mid-level employee", source: "SHRM 2023", color: "var(--yellow)" },
 ];
 
 const problems = [
   {
-    persona: "Team Lead", icon: "👨‍💼", color: "#FF6640",
+    persona: "Team Lead", icon: "👨‍💼", color: "var(--red)",
     title: "Team leads are leading blind.",
     description: "They're held accountable for team performance and morale — but given zero tools to measure either. By the time problems surface, the damage is already done.",
     painPoints: ["No real-time visibility into team morale between 1-on-1s", "Can't spot who's burning out until they resign", "Engagement conversations feel guesswork without data", "No evidence to back resource or restructuring requests"],
     stat: "71%", statLabel: "of managers say they lack tools to assess team engagement effectively",
   },
   {
-    persona: "Team Member", icon: "🧑‍💻", color: "#7B5CF5",
+    persona: "Team Member", icon: "🧑‍💻", color: "var(--blue)",
     title: "Team members feel invisible.",
     description: "Feedback goes into annual surveys and disappears. The result? Silent disengagement — teams mentally check out long before they physically leave.",
     painPoints: ["Annual surveys feel pointless — nothing ever changes", "No safe, anonymous space to express real concerns", "Burnout builds silently without anyone noticing", "Lack of recognition slowly erodes motivation"],
     stat: "85%", statLabel: "of employees globally are disengaged at work (Gallup 2023)",
   },
   {
-    persona: "HR Lead", icon: "📊", color: "#00B2A9",
+    persona: "HR Lead", icon: "📊", color: "var(--yellow)",
     title: "HR is always reacting, never predicting.",
     description: "HR leaders are charged with building culture — but their primary tool remains the annual survey. Too infrequent, too generic, and always too late to prevent attrition.",
     painPoints: ["Annual surveys miss real-time shifts in culture", "Attrition costs spiral before HR can intervene", "No department-level granularity in engagement data", "Culture initiatives can't be measured or iterated"],
     stat: "$11.3K", statLabel: "average cost to replace a single mid-level employee (SHRM, 2023)",
   },
   {
-    persona: "Companies", icon: "🏢", color: "#00B2A9",
+    persona: "Companies", icon: "🏢", color: "var(--yellow)",
     title: "Companies invest in perks, not insights.",
     description: "Organisations spend billions on team events, wellness benefits, and culture initiatives — without measuring whether any of it moves the needle.",
     painPoints: ["$8.8T lost globally to disengaged employees every year", "Low engagement reduces productivity by up to 18%", "58% of voluntary departures are culture-related", "Board-level culture reports are based on gut feel, not data"],
@@ -43,11 +43,11 @@ const problems = [
 ];
 
 export default function Problem({ isDark }: ProblemProps) {
-  const bg = isDark ? "var(--navy)" : "#F4F6FA";
+  const bg = isDark ? "var(--navy)" : "var(--grey)";
   const cardBg = isDark ? "rgba(255,255,255,0.03)" : "#FFFFFF";
-  const border = isDark ? "1px solid var(--border-dark)" : "1px solid #E5EAF0";
-  const tc = isDark ? "white" : "#060D1B";
-  const ts = isDark ? "#94A8C4" : "#475569";
+  const border = isDark ? "1px solid var(--border-dark)" : "1px solid rgba(0,0,0,0.08)";
+  const tc = isDark ? "white" : "var(--black)";
+  const ts = isDark ? "rgba(255,255,255,0.6)" : "rgba(0,0,0,0.6)";
 
   return (
     <section id="problem" style={{ background: bg, padding: "96px 0" }}>
@@ -55,7 +55,7 @@ export default function Problem({ isDark }: ProblemProps) {
 
         {/* Section header */}
         <div style={{ textAlign: "center", marginBottom: 64 }}>
-          <div className="section-label" style={{ justifyContent: "center", color: "#FF6640", background: "rgba(255,102,64,0.08)", borderColor: "rgba(255,102,64,0.22)" }}>
+          <div className="section-label" style={{ justifyContent: "center", color: "var(--red)", background: "rgba(209,61,66,0.08)", borderColor: "rgba(209,61,66,0.22)" }}>
             ⚠️ The Problem
           </div>
           <h2 style={{ fontFamily: "DM Sans,sans-serif", fontWeight: 900, fontSize: "clamp(28px, 4vw, 52px)", color: tc, margin: "0 0 16px", letterSpacing: "-0.03em", lineHeight: 1.1 }}>
@@ -100,8 +100,8 @@ export default function Problem({ isDark }: ProblemProps) {
                 <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
                   {p.painPoints.map((pt) => (
                     <div key={pt} style={{ display: "flex", gap: 14, alignItems: "flex-start" }}>
-                      <div style={{ width: 24, height: 24, borderRadius: "50%", background: "rgba(255,102,64,0.1)", border: "1px solid rgba(255,102,64,0.2)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginTop: 2 }}>
-                        <span style={{ fontSize: 12, color: "#FF6640" }}>✕</span>
+                      <div style={{ width: 24, height: 24, borderRadius: "50%", background: "rgba(209,61,66,0.1)", border: "1px solid rgba(209,61,66,0.2)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginTop: 2 }}>
+                        <span style={{ fontSize: 12, color: "var(--red)" }}>✕</span>
                       </div>
                       <p style={{ fontSize: 15, color: ts, margin: 0, lineHeight: 1.55 }}>{pt}</p>
                     </div>

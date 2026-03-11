@@ -4,8 +4,8 @@ import { Plus, Minus } from "lucide-react";
 
 function FAQItem({ q, a, isDark }: { q: string; a: string; isDark: boolean }) {
   const [open, setOpen] = useState(false);
-  const tc = isDark ? "white" : "#060D1B";
-  const ts = isDark ? "#94A8C4" : "#475569";
+  const tc = isDark ? "white" : "var(--black)";
+  const ts = isDark ? "rgba(255,255,255,0.6)" : "rgba(0,0,0,0.6)";
   return (
     <div className={`faq-item ${open ? "open" : ""}`}>
       <button
@@ -23,21 +23,21 @@ function FAQItem({ q, a, isDark }: { q: string; a: string; isDark: boolean }) {
 }
 
 const faqGroups = [
-  { group:"For Team Leads", icon:"👥", color:"#FF6640", faqs:[
+  { group:"For Team Leads", icon:"👥", color:"var(--red)", faqs:[
     { q:"How long does it take to set up Paige for my team?", a:"Setup takes less than 10 minutes. You create your account, build your team profile, and invite team members via a link or email. No IT involvement required. Your first pulse check can go out within the hour." },
     { q:"Will my team members actually complete the pulse checks?", a:"Paige is designed for high completion rates. Each pulse check is 5 questions and takes under 2 minutes. Automated, friendly reminders are sent via email or in-app. Most teams see 75–90% completion rates within 3 weeks of consistent use." },
     { q:"Can I see individual responses from team members?", a:"No — and that's by design. Paige shows you aggregated team scores and trends, not individual responses. This protects anonymity and builds the psychological safety needed for honest feedback." },
     { q:"What actions should I take based on the scores?", a:"Paige's AI generates specific engagement playbooks for each dimension that needs attention. These are practical, time-boxed actions — facilitated retrospectives, 1-on-1 frameworks, workload audits, and recognition rituals tailored to your team." },
     { q:"What if my team is very small — say 5 people?", a:"Paige works for teams of any size. For very small teams (under 8 members), we aggregate anonymously at the group level to protect individual privacy while still delivering useful team insights." },
   ]},
-  { group:"For HR Leads", icon:"📋", color:"#7B5CF5", faqs:[
+  { group:"For HR Leads", icon:"📋", color:"var(--blue)", faqs:[
     { q:"How does Paige differ from our existing annual engagement survey?", a:"Annual surveys are slow, infrequent, and always too late to prevent disengagement. Paige runs weekly pulse checks that take 2 minutes — delivering real-time, continuous data instead of a once-a-year snapshot that's stale on arrival." },
     { q:"Can I view data across all teams in the organisation?", a:"Yes. HR admins and senior leaders have access to an org-wide dashboard showing aggregate engagement across every team, department, and the overall company — with full drill-down capability to any level." },
     { q:"How do we handle GDPR and data privacy?", a:"Paige is fully GDPR-compliant. All responses are anonymised at collection. We do not sell or share individual data. Organisations retain ownership of their data and can request deletion at any time." },
     { q:"Can HR customise the pulse check questions?", a:"Yes. Paige ships with a science-backed default question set, but HR admins can add custom questions, modify question sets per department, and align pulse checks to specific culture initiatives or business strategies." },
     { q:"Can we integrate Paige with our existing HRIS or Slack?", a:"Integrations with Slack, Microsoft Teams, and major HRIS platforms are on our roadmap for Phase 2. Early access clients will be first to access integrations as they launch — and will have input into which integrations are prioritised." },
   ]},
-  { group:"For Companies", icon:"🏢", color:"#00B2A9", faqs:[
+  { group:"For Companies", icon:"🏢", color:"var(--yellow)", faqs:[
     { q:"What ROI can we expect from using Paige?", a:"Clients typically see measurable improvements in engagement scores within 6–8 weeks. Reduced attrition (saving 33–200% of annual salary per retained employee), improved productivity, and fewer performance escalations are most commonly cited outcomes." },
     { q:"How is Paige priced?", a:"Paige is priced per seat, per month with volume discounts for companies over 50 employees. Pricing details will be confirmed at beta launch. Early access clients benefit from founder pricing locked in for 12 months post-launch." },
     { q:"Is our company's engagement data secure?", a:"Absolutely. Paige uses enterprise-grade encryption at rest and in transit. We are SOC2 Type II compliant in progress, and GDPR-ready from day one. We do not use your company's data to train AI models without explicit consent." },
@@ -47,9 +47,9 @@ const faqGroups = [
 ];
 
 export default function FAQ({ isDark }: { isDark: boolean }) {
-  const bg = isDark ? "var(--navy)" : "#F4F6FA";
-  const tc = isDark ? "white" : "#060D1B";
-  const ts = isDark ? "#94A8C4" : "#475569";
+  const bg = isDark ? "var(--navy)" : "var(--grey)";
+  const tc = isDark ? "white" : "var(--black)";
+  const ts = isDark ? "rgba(255,255,255,0.6)" : "rgba(0,0,0,0.6)";
   const [activeGroup, setActiveGroup] = useState(0);
 
   return (

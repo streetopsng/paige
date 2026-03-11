@@ -4,20 +4,20 @@ import { ArrowRight } from "lucide-react";
 interface SolutionProps { isDark: boolean; }
 
 const corePillars = [
-  { num:"01", title:"Weekly Pulse Checks", sub:"Short science-backed questions under 2 minutes. High completion, rich insights, zero survey fatigue.", color:"#00B2A9" },
-  { num:"02", title:"6 Engagement Dimensions", sub:"Measure safety, workload, recognition, clarity, cohesion, and growth for a complete team health picture.", color:"#7B5CF5" },
-  { num:"03", title:"AI Recommendations", sub:"Paige surfaces actionable engagement playbooks based on your team's unique engagement profile.", color:"#FF6640" },
-  { num:"04", title:"Anonymous & Safe", sub:"Team members respond anonymously. Psychological safety is baked into the platform's architecture — not just policy.", color:"#00B2A9" },
+  { num:"01", title:"Weekly Pulse Checks", sub:"Short science-backed questions under 2 minutes. High completion, rich insights, zero survey fatigue.", color:"var(--yellow)" },
+  { num:"02", title:"6 Engagement Dimensions", sub:"Measure safety, workload, recognition, clarity, cohesion, and growth for a complete team health picture.", color:"var(--blue)" },
+  { num:"03", title:"AI Recommendations", sub:"Paige surfaces actionable engagement playbooks based on your team's unique engagement profile.", color:"var(--red)" },
+  { num:"04", title:"Anonymous & Safe", sub:"Team members respond anonymously. Psychological safety is baked into the platform's architecture — not just policy.", color:"var(--yellow)" },
 ];
 
 function BenefitSection({ id, audience, icon, color, header, sub, benefits, isDark, ctaHref }: {
   id: string; audience: string; icon: string; color: string; header: string; sub: string;
   benefits: {title:string;sub:string}[]; isDark: boolean; ctaHref: string;
 }) {
-  const tc = isDark ? "white" : "#060D1B";
-  const ts = isDark ? "#94A8C4" : "#475569";
+  const tc = isDark ? "white" : "var(--black)";
+  const ts = isDark ? "rgba(255,255,255,0.6)" : "rgba(0,0,0,0.6)";
   const sectionBg = isDark ? "var(--navy)" : "#FFFFFF";
-  const altBg = isDark ? "var(--navy)" : "#F4F6FA";
+  const altBg = isDark ? "var(--navy)" : "var(--grey)";
 
   return (
     <div id={id} style={{ padding: "96px 0", background: id === "companies" || id === "team-members" ? sectionBg : altBg }}>
@@ -56,10 +56,10 @@ function BenefitSection({ id, audience, icon, color, header, sub, benefits, isDa
 }
 
 export default function Solution({ isDark }: SolutionProps) {
-  const tc = isDark ? "white" : "#060D1B";
-  const ts = isDark ? "#94A8C4" : "#475569";
-  const cardBg = isDark ? "rgba(255,255,255,0.03)" : "#F8FAFC";
-  const border = isDark ? "1px solid var(--border-dark)" : "1px solid #E5EAF0";
+  const tc = isDark ? "white" : "var(--black)";
+  const ts = isDark ? "rgba(255,255,255,0.6)" : "rgba(0,0,0,0.6)";
+  const cardBg = isDark ? "rgba(255,255,255,0.03)" : "var(--grey)";
+  const border = isDark ? "1px solid var(--border-dark)" : "1px solid rgba(0,0,0,0.08)";
 
   const companyB = [
     { title:"Reduce Costly Attrition", sub:"Identify flight risks before they become departures. Save tens of thousands per role retained." },
@@ -139,10 +139,10 @@ export default function Solution({ isDark }: SolutionProps) {
       </section>
 
       {/* Audience benefit sections */}
-      <BenefitSection id="companies"    audience="Companies"         icon="🏢" color="#00B2A9" header="Build a Culture That Retains Top Talent and Drives Performance"              sub="Organisations using Paige gain full visibility into team engagement across the entire company — enabling proactive, data-driven people management at scale."             benefits={companyB} isDark={isDark} ctaHref="#early-access" />
-      <BenefitSection id="hr-teams"    audience="HR Teams & Leads"   icon="📋" color="#7B5CF5" header="Transform HR from Reactive to Predictive with Real-Time Engagement Data"   sub="Paige gives HR professionals the continuous, granular data they need to build culture programmes that actually work — and prove it to the board."                    benefits={hrB}      isDark={isDark} ctaHref="#early-access" />
-      <BenefitSection id="team-leads"  audience="Team Leads"         icon="👥" color="#FF6640" header="Know Your Team Before Problems Become Crises"                              sub="Paige is your weekly team health readout — giving you the insights to lead with confidence, coach with evidence, and build teams that perform."                        benefits={leadB}    isDark={isDark} ctaHref="#early-access" />
-      <BenefitSection id="team-members" audience="Team Members"      icon="🙋" color="#00B2A9" header="Your Feedback Should Actually Change Things"                              sub="Paige makes your voice count. Share how you really feel, anonymously — and watch your workplace actually respond with meaningful action."                              benefits={memberB}  isDark={isDark} ctaHref="#early-access" />
+      <BenefitSection id="companies"    audience="Companies"         icon="🏢" color="var(--yellow)" header="Build a Culture That Retains Top Talent and Drives Performance"              sub="Organisations using Paige gain full visibility into team engagement across the entire company — enabling proactive, data-driven people management at scale."             benefits={companyB} isDark={isDark} ctaHref="#early-access" />
+      <BenefitSection id="hr-teams"    audience="HR Teams & Leads"   icon="📋" color="var(--blue)" header="Transform HR from Reactive to Predictive with Real-Time Engagement Data"   sub="Paige gives HR professionals the continuous, granular data they need to build culture programmes that actually work — and prove it to the board."                    benefits={hrB}      isDark={isDark} ctaHref="#early-access" />
+      <BenefitSection id="team-leads"  audience="Team Leads"         icon="👥" color="var(--red)" header="Know Your Team Before Problems Become Crises"                              sub="Paige is your weekly team health readout — giving you the insights to lead with confidence, coach with evidence, and build teams that perform."                        benefits={leadB}    isDark={isDark} ctaHref="#early-access" />
+      <BenefitSection id="team-members" audience="Team Members"      icon="🙋" color="var(--yellow)" header="Your Feedback Should Actually Change Things"                              sub="Paige makes your voice count. Share how you really feel, anonymously — and watch your workplace actually respond with meaningful action."                              benefits={memberB}  isDark={isDark} ctaHref="#early-access" />
     </div>
   );
 }

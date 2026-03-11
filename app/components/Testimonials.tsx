@@ -1,18 +1,18 @@
 "use client";
 
 const testimonials = [
-  { quote:"StreetOps ran a team engagement workshop for our sales department and the results were immediate. Paige feels like the natural digital extension of that work — exactly what we'd been looking for.", name:"Adaeze Okonkwo", title:"Head of People & Culture", company:"FinServe Nigeria", initials:"AO", color:"#00B2A9" },
-  { quote:"Our team leads had no visibility into how their teams were really doing. After StreetOps' engagement programme, they started asking the right questions. A platform like Paige would make that transformation 3x faster.", name:"Tunde Adesanya", title:"Chief Operating Officer", company:"TechBridge Africa", initials:"TA", color:"#7B5CF5" },
-  { quote:"The data StreetOps shared about disengagement costs was staggering. When Paige launches, we're first in line — this is exactly what our 200-person organisation needs to stay competitive.", name:"Ngozi Eze", title:"Director of Talent", company:"Meridian Consulting Group", initials:"NE", color:"#FF6640" },
-  { quote:"The team at StreetOps genuinely understands the African workplace. Their frameworks are grounded in our realities, not copied from Silicon Valley. I'm excited for Paige to bring that to a digital platform.", name:"Emeka Ibeh", title:"VP of Human Resources", company:"Apex Group", initials:"EI", color:"#00B2A9" },
-  { quote:"After StreetOps worked with our management team, retention improved by 22% in 6 months. If Paige can operationalise even half of what they teach, it'll be a game-changer for HR teams across the continent.", name:"Funke Adeleke", title:"HR Manager", company:"Pinnacle Telecoms", initials:"FA", color:"#7B5CF5" },
-  { quote:"As a team lead, I was sceptical about engagement tools. But seeing what StreetOps did with our group changed my mind. Paige is the tool I wish I'd had from day one of leading a team.", name:"Chukwuemeka Nwosu", title:"Engineering Team Lead", company:"DataCore Solutions", initials:"CN", color:"#FF6640" },
+  { quote:"StreetOps ran a team engagement workshop for our sales department and the results were immediate. Paige feels like the natural digital extension of that work — exactly what we'd been looking for.", name:"Adaeze Okonkwo", title:"Head of People & Culture", company:"FinServe Nigeria", initials:"AO", color:"var(--yellow)" },
+  { quote:"Our team leads had no visibility into how their teams were really doing. After StreetOps' engagement programme, they started asking the right questions. A platform like Paige would make that transformation 3x faster.", name:"Tunde Adesanya", title:"Chief Operating Officer", company:"TechBridge Africa", initials:"TA", color:"var(--blue)" },
+  { quote:"The data StreetOps shared about disengagement costs was staggering. When Paige launches, we're first in line — this is exactly what our 200-person organisation needs to stay competitive.", name:"Ngozi Eze", title:"Director of Talent", company:"Meridian Consulting Group", initials:"NE", color:"var(--red)" },
+  { quote:"The team at StreetOps genuinely understands the African workplace. Their frameworks are grounded in our realities, not copied from Silicon Valley. I'm excited for Paige to bring that to a digital platform.", name:"Emeka Ibeh", title:"VP of Human Resources", company:"Apex Group", initials:"EI", color:"var(--yellow)" },
+  { quote:"After StreetOps worked with our management team, retention improved by 22% in 6 months. If Paige can operationalise even half of what they teach, it'll be a game-changer for HR teams across the continent.", name:"Funke Adeleke", title:"HR Manager", company:"Pinnacle Telecoms", initials:"FA", color:"var(--blue)" },
+  { quote:"As a team lead, I was sceptical about engagement tools. But seeing what StreetOps did with our group changed my mind. Paige is the tool I wish I'd had from day one of leading a team.", name:"Chukwuemeka Nwosu", title:"Engineering Team Lead", company:"DataCore Solutions", initials:"CN", color:"var(--red)" },
 ];
 
 export default function Testimonials({ isDark }: { isDark: boolean }) {
   const bg = isDark ? "var(--navy)" : "#FFFFFF";
-  const tc = isDark ? "white" : "#060D1B";
-  const ts = isDark ? "#94A8C4" : "#475569";
+  const tc = isDark ? "white" : "var(--black)";
+  const ts = isDark ? "rgba(255,255,255,0.6)" : "rgba(0,0,0,0.6)";
 
   return (
     <section id="testimonials" style={{ background: bg, padding: "96px 0" }}>
