@@ -1,0 +1,97 @@
+﻿node.exe : 
+At C:\Program Files\no
+dejs\npx.ps1:29 char:3
++   & $NODE_EXE 
+$NPX_CLI_JS $args
++   ~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~
+    + CategoryInfo    
+          : NotSpeci  
+  fied: (:String) [   
+ ], RemoteExceptio    
+n
+    + FullyQualifiedE 
+   rrorId : NativeCo  
+  mmandError
+ 
+Oops! Something went 
+wrong! :(
+
+ESLint: 8.57.1
+
+TypeError: Converting 
+circular structure to 
+JSON
+    --> starting at 
+object with 
+constructor 'Object'
+    |     property 
+'configs' -> object 
+with constructor 
+'Object'
+    |     property 
+'flat' -> object with 
+constructor 'Object'
+    |     ...
+    |     property 
+'plugins' -> object 
+with constructor 
+'Object'
+    --- property 
+'react' closes the 
+circle
+Referenced from: C:\Us
+ers\HP\Project\paige\.
+eslintrc.json
+    at JSON.stringify 
+(<anonymous>)
+    at C:\Users\HP\Pro
+ject\paige\node_module
+s\@eslint\eslintrc\dis
+t\eslintrc.cjs:2156:45
+    at Array.map 
+(<anonymous>)
+    at ConfigValidator
+.formatErrors (C:\User
+s\HP\Project\paige\nod
+e_modules\@eslint\esli
+ntrc\dist\eslintrc.cjs
+:2147:23)
+    at ConfigValidator
+.validateConfigSchema 
+(C:\Users\HP\Project\p
+aige\node_modules\@esl
+int\eslintrc\dist\esli
+ntrc.cjs:2177:84)
+    at ConfigArrayFact
+ory._normalizeConfigDa
+ta (C:\Users\HP\Projec
+t\paige\node_modules\@
+eslint\eslintrc\dist\e
+slintrc.cjs:3019:19)
+    at ConfigArrayFact
+ory._loadConfigData (C
+:\Users\HP\Project\pai
+ge\node_modules\@eslin
+t\eslintrc\dist\eslint
+rc.cjs:2984:21)
+    at ConfigArrayFact
+ory._loadExtendedShare
+ableConfig (C:\Users\H
+P\Project\paige\node_m
+odules\@eslint\eslintr
+c\dist\eslintrc.cjs:32
+85:21)
+    at ConfigArrayFact
+ory._loadExtends (C:\U
+sers\HP\Project\paige\
+node_modules\@eslint\e
+slintrc\dist\eslintrc.
+cjs:3156:25)
+    at ConfigArrayFact
+ory._normalizeObjectCo
+nfigDataBody (C:\Users
+\HP\Project\paige\node
+_modules\@eslint\eslin
+trc\dist\eslintrc.cjs:
+3095:25)
