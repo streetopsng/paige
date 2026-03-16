@@ -2,6 +2,7 @@ import { ArrowRight } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import SpanDisplay from "./comp/span-display";
+import ScrollReveal from "../framer-motion-animations/scroll-reveal";
 
 interface AudienceCard {
   id: string;
@@ -105,44 +106,56 @@ const SolutionSection = () => {
     <section className="bg-background px-4 py-16 md:px-8 md:py-20">
       <div className="mx-auto flex max-w-6xl flex-col gap-10">
         <header className="mx-auto max-w-3xl text-center">
-          <SpanDisplay content="THE SOLUTION" />
-          <h2 className="text-4xl leading-none text-foreground sm:text-5xl md:text-6xl">
-            Introducing <span className="text-primary">Paige</span>
-            <span className="mt-2 block text-3xl italic sm:text-4xl md:text-5xl">
-              by StreetOps
-            </span>
-          </h2>
-          <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg font-body">
-            The first team engagement intelligence platform built for the
-            realities of modern work — continuous, actionable, and designed for
-            every layer of your organization.
-          </p>
+          <ScrollReveal direction="up">
+            <SpanDisplay content="THE SOLUTION" />
+          </ScrollReveal>
+          <ScrollReveal direction="down">
+            <h2 className="text-4xl leading-none text-foreground sm:text-5xl md:text-6xl">
+              Introducing <span className="text-primary">Paige</span>
+              <span className="mt-2 block text-3xl italic sm:text-4xl md:text-5xl">
+                by StreetOps
+              </span>
+            </h2>
+          </ScrollReveal>
+          <ScrollReveal>
+            <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg font-body">
+              The first team engagement intelligence platform built for the
+              realities of modern work — continuous, actionable, and designed
+              for every layer of your organization.
+            </p>
+          </ScrollReveal>
         </header>
 
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-          {audienceCards.map((card) => (
-            <article
-              key={card.id}
-              className="rounded-[1.25rem] border  bg-[#FFBF9D66] dark:bg-[#241E18] border-primary p-5  transition-transform duration-200 hover:-translate-y-1"
+          {audienceCards.map((card, i) => (
+            <ScrollReveal
+              key={i}
+              delay={i > 1 ? i - 0.7 : i}
+              direction={i % 2 == 0 ? "right" : "left"}
             >
-              <div className="mb-4 flex h-7 w-7 items-center justify-center rounded-full border border-primary text-[11px] font-semibold text-primary font-body">
-                {card.id}
-              </div>
-              <h3 className="text-lg leading-tight text-card-foreground">
-                {card.title}
-              </h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground font-body">
-                {card.description}
-              </p>
-            </article>
+              <article
+                key={card.id}
+                className="rounded-[1.25rem] border h-full  bg-[#FFBF9D66] dark:bg-[#241E18] border-primary p-5  transition-transform duration-200 hover:-translate-y-1"
+              >
+                <div className="mb-4 flex h-7 w-7 items-center justify-center rounded-full border border-primary text-[11px] font-semibold text-primary font-body">
+                  {card.id}
+                </div>
+                <h3 className="text-lg leading-tight text-card-foreground">
+                  {card.title}
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground font-body">
+                  {card.description}
+                </p>
+              </article>
+            </ScrollReveal>
           ))}
         </div>
 
         <div className="flex flex-wrap gap-y-2  items-center md:justify-evenly justify-between ">
-          {tabs.map((tab, index) => (
+          {tabs.map((tab, i) => (
             <span
               key={tab}
-              className={`rounded-full border md:w-1/5 w-[45%] text-center  text-[11px] md:font-semibold uppercase   py-1 ${
+              className={`rounded-full border md:w-1/5 w-[45%]  text-center  text-[11px] md:font-semibold uppercase   py-1 ${
                 "border-border bg-background text-foreground"
                 // index === 0
                 //   ? "border-primary bg-primary text-primary-foreground"
@@ -156,14 +169,18 @@ const SolutionSection = () => {
 
         <div className="  gap-8 lg:flex lg:justify-between items-end lg:gap-12">
           <div className="max-w-3xl">
-            <h2 className="text-3xl leading-tight text-foreground sm:text-4xl md:text-5xl">
-              Build a culture that retains top talent and drives performance
-            </h2>
-            <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground font-body">
-              Organizations using Paige gain full visibility into team
-              engagement across the entire company — unlocking proactive,
-              data-driven people management at scale.
-            </p>
+            <ScrollReveal delay={0.5} direction="down">
+              <h2 className="text-3xl leading-tight text-foreground sm:text-4xl md:text-5xl">
+                Build a culture that retains top talent and drives performance
+              </h2>
+            </ScrollReveal>
+            <ScrollReveal delay={1} direction="up">
+              <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground font-body">
+                Organizations using Paige gain full visibility into team
+                engagement across the entire company — unlocking proactive,
+                data-driven people management at scale.
+              </p>
+            </ScrollReveal>
           </div>
 
           <div className="lg:justify-self-end md:pt-0 pt-6">
@@ -178,21 +195,27 @@ const SolutionSection = () => {
         </div>
 
         <div className="grid gap-2 md:grid-cols-2 xl:grid-cols-4">
-          {valueCards.map((card) => (
-            <article
-              key={card.id}
-              className="bg-[#FFBF9D66] dark:bg-[#241E18] border-primary rounded-[1.25rem] border  p-5 transition-transform duration-200 hover:-translate-y-1"
+          {valueCards.map((card, i) => (
+            <ScrollReveal
+              key={i}
+              delay={i > 0 ? i + 0.6 : i}
+              direction={i % 2 == 0 ? "right" : "left"}
             >
-              <div className="border-primary mb-4 flex h-7 w-7 items-center justify-center rounded-full border text-[11px] font-semibold text-primary font-body">
-                {card.id}
-              </div>
-              <h3 className="text-lg leading-tight text-card-foreground">
-                {card.title}
-              </h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground font-body">
-                {card.description}
-              </p>
-            </article>
+              <article
+                key={card.id}
+                className="bg-[#FFBF9D66] h-full dark:bg-[#241E18] border-primary rounded-[1.25rem] border  p-5 transition-transform duration-200 hover:-translate-y-1"
+              >
+                <div className="border-primary mb-4 flex h-7 w-7 items-center justify-center rounded-full border text-[11px] font-semibold text-primary font-body">
+                  {card.id}
+                </div>
+                <h3 className="text-lg leading-tight text-card-foreground">
+                  {card.title}
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground font-body">
+                  {card.description}
+                </p>
+              </article>
+            </ScrollReveal>
           ))}
         </div>
       </div>
