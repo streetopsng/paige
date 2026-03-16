@@ -34,8 +34,6 @@ const socialLinks = [
   { label: "X", href: "#" },
   { label: "Instagram", href: "#", icon: Instagram },
   { label: "LinkedIn", href: "#", icon: Linkedin },
-  { label: "YouTube", href: "#", icon: Youtube },
-  { label: "Email", href: "#", icon: Mail },
 ];
 
 const FooterSection = () => {
@@ -68,12 +66,14 @@ const FooterSection = () => {
                     key={item.label}
                     href={item.href}
                     aria-label={item.label}
-                    className="flex h-8 w-8 items-center justify-center rounded-md bg-inverse text-inverse-foreground transition-colors hover:bg-inverse/85"
+                    className="flex h-8 w-8 bg-[#302C28] dark:bg-[#302C28] items-center justify-center rounded-md   transition-colors 5"
                   >
                     {Icon ? (
-                      <Icon className="h-3.5 w-3.5" />
+                      <Icon className="h-3.5 w-3.5 text-white" />
                     ) : (
-                      <span className="text-[10px] font-semibold">X</span>
+                      <span className="text-[10px] font-semibold text-white">
+                        X
+                      </span>
                     )}
                   </a>
                 );
