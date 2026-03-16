@@ -1,3 +1,4 @@
+"use client";
 import { ArrowRight } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -103,14 +104,14 @@ const tabs = [
 
 const SolutionSection = () => {
   return (
-    <section className="bg-background px-4 py-16 md:px-8 md:py-20">
+    <section className="bg-background px-4 py-6 md:px-8 md:py-8">
       <div className="mx-auto flex max-w-6xl flex-col gap-10">
         <header className="mx-auto max-w-3xl text-center">
           <ScrollReveal direction="up">
             <SpanDisplay content="THE SOLUTION" />
           </ScrollReveal>
           <ScrollReveal direction="down">
-            <h2 className="text-4xl leading-none text-foreground sm:text-5xl md:text-6xl">
+            <h2 className="text-4xl font-semibold leading-none text-foreground sm:text-5xl md:text-6xl">
               Introducing <span className="text-primary">Paige</span>
               <span className="mt-2 block text-3xl italic sm:text-4xl md:text-5xl">
                 by StreetOps
@@ -155,7 +156,7 @@ const SolutionSection = () => {
           {tabs.map((tab, i) => (
             <span
               key={tab}
-              className={`rounded-full border md:w-1/5 w-[45%]  text-center  text-[11px] md:font-semibold uppercase   py-1 ${
+              className={`rounded-full border md:w-1/5 w-[45%]  text-center  text-[11px] md:font-semibold uppercase   py-2 ${
                 "border-border bg-background text-foreground"
                 // index === 0
                 //   ? "border-primary bg-primary text-primary-foreground"
@@ -185,6 +186,11 @@ const SolutionSection = () => {
 
           <div className="lg:justify-self-end md:pt-0 pt-6">
             <Button
+              onClick={() => {
+                document
+                  .getElementById("early-access")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
               size="lg"
               className="rounded-full px-8 font-body text-base shadow-sm cursor-pointer"
             >
