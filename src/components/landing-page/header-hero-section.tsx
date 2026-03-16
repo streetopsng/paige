@@ -19,7 +19,7 @@ const HeaderHeroSection = () => {
   const { setTheme, theme } = useTheme();
 
   const textRef = useRef<HTMLSpanElement>(null);
-  const [showMenu, setShowMenu] = useState<boolean>(true);
+  const [showMenu, setShowMenu] = useState<boolean>(false);
 
   useEffect(() => {
     gsap.to(textRef.current, {
