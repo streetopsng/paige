@@ -35,7 +35,7 @@ const faqItems = [
 
 const FaqSection = () => {
   return (
-    <section className=" px-2 py-10 md:px-8  bg-[#FFE5D8] dark:bg-transparent">
+    <section className=" px-2 py-6 md:px-8  bg-[#FFE5D8] dark:bg-transparent">
       <div className="mx-auto max-w-6xl rounded-[2rem] bg-inverse px-2  text-inverse-foreground md:px-10 ">
         <header className="mx-auto max-w-3xl text-center">
           <div className="mb-5 flex justify-center">
@@ -80,7 +80,7 @@ const FaqSection = () => {
                 value={item.question}
                 className=""
               >
-                <AccordionTrigger className="py-5 text-left text-sm text-inverse-foreground hover:no-underline font-body ">
+                <AccordionTrigger className="py-4 text-left text-sm text-inverse-foreground hover:no-underline font-body ">
                   <span>{item.question}</span>
                   {/* <span className=" ml-4 flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-border/40 bg-inverse-card text-inverse-muted">
                     <Plus className="h-3.5 w-3.5" />

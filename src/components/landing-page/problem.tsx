@@ -60,7 +60,7 @@ const stats: StatItem[] = [
 
 const ProblemSection = () => {
   return (
-    <section className="min-h-screen bg-background py-16  flex flex-col items-center justify-center">
+    <section className="min-h-screen bg-background py-6  flex flex-col items-center justify-center">
       <div className="max-w-5xl w-full mx-auto">
         {/* Badge */}
         <div className="flex justify-center mb-6 px-4 md:px-8">

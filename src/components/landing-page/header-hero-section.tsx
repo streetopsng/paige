@@ -84,16 +84,9 @@ const HeaderHeroSection = () => {
           className="absolute inset-x-0 top-0 h-px bg-border"
           aria-hidden="true"
         />
-        <div
-          className="hero-gradient  absolute inset-0 opacity-70"
+        <div className="hero-gradient  absolute inset-0 opacity-70" />
 
-          // style={{
-          //   background:
-          //     "radial-gradient(circle at 50% 36%, hsl(var(--hero-glow) / 0.22), transparent 28%), linear-gradient(180deg, transparent, hsl(var(--background)))",
-          // }}
-        />
-
-        <header className="relative z-10 mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-6 md:px-4">
+        <header className="relative z-10 mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-4 md:px-4">
           <div>
             <a
               href="#home"
@@ -103,9 +96,9 @@ const HeaderHeroSection = () => {
               <span className="text-3xl font-semibold tracking-tight text-primary">
                 Paige
               </span>
-              <span className="text-[0.65rem]   text-muted-foreground">
+              <span className="text-[0.5rem]   text-muted-foreground">
                 by{" "}
-                <span className="font-medium text-[0.8rem] text-muted-foreground">
+                <span className="font-medium text-[0.6rem] text-muted-foreground">
                   StreetOps
                 </span>
               </span>
@@ -145,11 +138,21 @@ const HeaderHeroSection = () => {
                 <Sun className=" h-4 w-4" />
               )}
             </button>
-            <Button size="lg">Get Early Access</Button>
+            <Button
+              className="cursor-pointer"
+              onClick={() => {
+                document
+                  .getElementById("early-access")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
+              size="lg"
+            >
+              Get Early Access
+            </Button>
             <Button
               type="button"
               onClick={() => setShowMenu(true)}
-              className="md:hidden inline"
+              className="md:hidden inline "
             >
               <Menu />
             </Button>
@@ -161,7 +164,7 @@ const HeaderHeroSection = () => {
           className="relative z-10 mx-auto flex min-h-[calc(100vh-88px)] max-w-4xl flex-col items-center justify-center px-6 pb-20 pt-14 text-center md:px-4 md:pt-8"
         >
           <ScrollReveal direction="down">
-            <div className="mb-8 inline-flex rounded-full border border-primary bg-transparent px-4 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-primary">
+            <div className="mb-8 inline-flex rounded-full border-2 border-primary bg-transparent px-4 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-primary">
               Behavioural Technology Driven
             </div>
           </ScrollReveal>
@@ -170,13 +173,13 @@ const HeaderHeroSection = () => {
             <span className="font-semibold" ref={textRef}></span>
             <br />
             <ScrollReveal variant="fade">
-              <span className="font-semibold text-primary">
+              <span className="font-semibold text-primary ">
                 you can count on.
               </span>
             </ScrollReveal>
           </h1>
           <ScrollReveal direction="up">
-            <p className="mt-8 max-w-2xl text-balance text-base leading-6 text-muted-foreground md:text-xl">
+            <p className="mt-8 max-w-2xl  leading-6 text-muted-foreground ">
               Every team lead needs a tool that gives them deep insight into how
               their team is doing, what they need to thrive, and what to do to
               boost team engagement from anywhere and anytime.
@@ -184,7 +187,14 @@ const HeaderHeroSection = () => {
           </ScrollReveal>
 
           <div className="mt-12 flex flex-col items-center gap-4 sm:flex-row">
-            <Button className="min-w-52 bg-primary py-5">
+            <Button
+              onClick={() => {
+                document
+                  .getElementById("early-access")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="min-w-52 bg-primary py-6 cursor-pointer"
+            >
               Get early access
               <ArrowRight className="h-4 w-4" />
             </Button>

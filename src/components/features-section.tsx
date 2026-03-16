@@ -90,8 +90,8 @@ const stats: StatItem[] = [
 
 const FeaturesSection = () => {
   return (
-    <section className="  py-16 md:px-8 md:py-20 bg-[#FFE5D8] dark:bg-transparent">
-      <div className="mx-auto flex max-w-6xl flex-col gap-10 rounded-[2rem]   px-3 py-8  md:px-8 md:py-10">
+    <section className="  py-6 md:px-8  bg-[#FFE5D8] dark:bg-transparent">
+      <div className="mx-auto flex max-w-6xl flex-col gap-10 rounded-[2rem]   px-3   md:px-8 ">
         <header className="mx-auto max-w-3xl text-center">
           <ScrollReveal direction="down">
             <SpanDisplay content="PLATFORM FEATURES" />
@@ -118,7 +118,7 @@ const FeaturesSection = () => {
             >
               <article
                 key={feature.title}
-                className="min-h-42 h-full rounded-2xl border border-border bg-card px-5 py-4 shadow-sm transition-transform duration-200 hover:-translate-y-1 dark:bg-[#241E18] w-full"
+                className="min-h-42 h-full rounded-2xl border border-border bg-card px-5 py-3 shadow-sm transition-transform duration-200 hover:-translate-y-1 dark:bg-[#241E18] w-full"
               >
                 <h3 className="font-semibold  leading-tight text-card-foreground">
                   {feature.title}

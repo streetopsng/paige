@@ -9,7 +9,7 @@ import SolutionSection from "@/components/landing-page/solution-section";
 
 export default function Home() {
   return (
-    <div>
+    <div className="font-fraunces">
       <HeaderHeroSection />
       <ProblemSection />
       <SolutionSection />
