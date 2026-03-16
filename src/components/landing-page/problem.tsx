@@ -86,7 +86,7 @@ const ProblemSection = () => {
             <ScrollReveal
               key={card.label}
               variant="fade"
-              delay={index > 0 ? 1 - 0.7 : index}
+              // delay={index > 0 ? 1 - 0.7 : index}
               direction={index % 3 == 0 ? "right" : "left"}
             >
               <div
@@ -112,7 +112,7 @@ const ProblemSection = () => {
           {stats.map((stat, i) => (
             <ScrollReveal
               key={i}
-              delay={i > 0 ? 1 - 0.7 : i}
+              // delay={i > 0 ? 1 - 0.7 : i}
               direction={i % 3 == 0 ? "right" : "left"}
             >
               <div
