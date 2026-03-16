@@ -6,6 +6,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import ScrollReveal from "../framer-motion-animations/scroll-reveal";
 
 const faqCategories = ["For Team Leads", "For HR Leads", "For Companies"];
 
@@ -38,14 +39,18 @@ const FaqSection = () => {
       <div className="mx-auto max-w-6xl rounded-[2rem] bg-inverse px-2  text-inverse-foreground md:px-10 ">
         <header className="mx-auto max-w-3xl text-center">
           <div className="mb-5 flex justify-center">
-            <span className="rounded-full border border-primary/20 bg-primary/10 px-4 py-1 text-[10px] font-semibold uppercase tracking-[0.24em] text-primary font-body">
-              FAQs
-            </span>
+            <ScrollReveal direction="down">
+              <span className="rounded-full border border-primary/20 bg-primary/10 px-4 py-1 text-[10px] font-semibold uppercase tracking-[0.24em] text-primary font-body">
+                FAQs
+              </span>
+            </ScrollReveal>
           </div>
 
-          <h2 className="font-semibold text-3xl  md:text-5xl">
-            Frequently asked questions
-          </h2>
+          <ScrollReveal delay={0.4} direction="up">
+            <h2 className="font-semibold text-3xl  md:text-5xl">
+              Frequently asked questions
+            </h2>
+          </ScrollReveal>
 
           <div className="mt-6 flex flex-wrap justify-center gap-3">
             {faqCategories.map((category, index) => (

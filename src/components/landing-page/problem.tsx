@@ -1,3 +1,5 @@
+import ScrollReveal from "../framer-motion-animations/scroll-reveal";
+
 interface ProblemCard {
   label: string;
   title: string;
@@ -62,54 +64,70 @@ const ProblemSection = () => {
       <div className="max-w-5xl w-full mx-auto">
         {/* Badge */}
         <div className="flex justify-center mb-6 px-4 md:px-8">
-          <span className="bg-[#FFBF9D66]  dark:bg-transparent border-primary border text-primary text-xs font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full ">
-            THE PROBLEM
-          </span>
+          <ScrollReveal direction="down">
+            <span className="bg-[#FFBF9D66]  dark:bg-transparent border-primary border text-primary text-xs font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full ">
+              THE PROBLEM
+            </span>
+          </ScrollReveal>
         </div>
 
         {/* Heading */}
-        <h1 className="text-center font-semibold  text-2xl sm:text-3xl md:text-4xl   mb-12 text-foreground px-4 md:px-8">
-          The engagement crisis is real,
-          <br />
-          and devastatingly expensive.
-        </h1>
+        <ScrollReveal delay={0.5} direction="up">
+          <h1 className="text-center font-semibold  text-2xl sm:text-3xl md:text-4xl   mb-12 text-foreground px-4 md:px-8">
+            The engagement crisis is real,
+            <br />
+            and devastatingly expensive.
+          </h1>
+        </ScrollReveal>
 
         {/* Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6 px-4 md:px-8">
-          {problemCards.map((card) => (
-            <div
+          {problemCards.map((card, index) => (
+            <ScrollReveal
               key={card.label}
-              className="bg-[#FFBF9D66] dark:bg-[#161412] border border-primary rounded-lg p-6 md:p-8"
+              variant="fade"
+              delay={index > 0 ? 1 - 0.7 : index}
+              direction={index % 3 == 0 ? "right" : "left"}
             >
-              <span className="text-primary text-xs font-semibold tracking-widest uppercase ">
-                {card.label}
-              </span>
-              <h3 className=" text-xl md:text-2xl mt-2 mb-3 text-card-foreground">
-                {card.title}
-              </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed ">
-                {card.description}
-              </p>
-            </div>
+              <div
+                key={card.label}
+                className="bg-[#FFBF9D66] dark:bg-[#161412] border border-primary rounded-lg p-6 md:p-8"
+              >
+                <span className="text-primary text-xs font-semibold tracking-widest uppercase ">
+                  {card.label}
+                </span>
+                <h3 className=" text-xl md:text-2xl mt-2 mb-3 text-card-foreground">
+                  {card.title}
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed ">
+                  {card.description}
+                </p>
+              </div>
+            </ScrollReveal>
           ))}
         </div>
 
         {/* Stats Bar */}
         <div className="grid grid-cols-2 md:grid-cols-4  rounded-sm overflow-hidden mx-4 lg:mx-0 md:px-0 bg-[#FFBF9D66] dark:bg-[#161412]">
           {stats.map((stat, i) => (
-            <div
+            <ScrollReveal
               key={i}
-              className={`bg-stat p-6 text-center ${
-                i < stats.length - 1 ? "border-r border-border" : ""
-              }`}
+              delay={i > 0 ? 1 - 0.7 : i}
+              direction={i % 3 == 0 ? "right" : "left"}
             >
-              <p className="font-semibold text-3xl md:text-4xl text-primary mb-2">
-                {stat.value}
-              </p>
-              <p className=" text-muted-foreground text-xs leading-relaxed ">
-                {stat.description}
-              </p>
-            </div>
+              <div
+                className={`bg-stat p-6 text-center ${
+                  i < stats.length - 1 ? "border-r border-border" : ""
+                }`}
+              >
+                <p className="font-semibold text-3xl md:text-4xl text-primary mb-2">
+                  {stat.value}
+                </p>
+                <p className=" text-muted-foreground text-xs leading-relaxed ">
+                  {stat.description}
+                </p>
+              </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>

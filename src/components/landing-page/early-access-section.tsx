@@ -10,6 +10,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import SpanDisplay from "./comp/span-display";
+import ScrollReveal from "../framer-motion-animations/scroll-reveal";
 
 const benefits = [
   "Free to use during the beta period",
@@ -23,19 +24,25 @@ const EarlyAccessSection = () => {
     <section className="bg-background  py-16 md:px-8 md:py-20">
       <div className="mx-auto grid max-w-6xl gap-8 overflow-hidden rounded-[2rem]   py-8   md:px-10 md:py-10 lg:grid-cols-2 lg:items-start lg:gap-10">
         <div className="max-w-xl px-4">
-          <span className="bg-[#FFBF9D66]  dark:bg-transparent border-primary border  text-primary text-xs font-semibold tracking-widest uppercase px-4 py-1 rounded-full ">
-            Beta Access — Limited Spots
-          </span>
-          <h2 className="mt-6 font-semibold text-3xl leading-none  md:text-5xl">
-            Be first to experience <span className="text-primary">Paige</span>{" "}
-            by StreetOps.
-          </h2>
+          <ScrollReveal delay={0.5} direction="up">
+            <span className="bg-[#FFBF9D66]  dark:bg-transparent border-primary border  text-primary text-xs font-semibold tracking-widest uppercase px-4 py-1 rounded-full ">
+              Beta Access — Limited Spots
+            </span>
+          </ScrollReveal>
+          <ScrollReveal delay={0.7} direction="down">
+            <h2 className="mt-6 font-semibold text-3xl leading-none  md:text-5xl">
+              Be first to experience <span className="text-primary">Paige</span>{" "}
+              by StreetOps.
+            </h2>
+          </ScrollReveal>
 
-          <p className="mt-5 max-w-lg text-lg  text-inverse-muted font-body">
-            Join our early access list today. Beta users get founder pricing
-            locked in for 12 months, white-glove onboarding, and the ability to
-            shape the product roadmap.
-          </p>
+          <ScrollReveal direction="down">
+            <p className="mt-5 max-w-lg text-lg  text-inverse-muted font-body">
+              Join our early access list today. Beta users get founder pricing
+              locked in for 12 months, white-glove onboarding, and the ability
+              to shape the product roadmap.
+            </p>
+          </ScrollReveal>
 
           <ul className="mt-8 space-y-4">
             {benefits.map((benefit) => (
