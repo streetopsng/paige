@@ -7,8 +7,6 @@ import ProblemSection from "@/components/landing-page/problem";
 import ReadyToTakeControl from "@/components/landing-page/ready-to-take-control";
 import SolutionSection from "@/components/landing-page/solution-section";
 
-import Image from "next/image";
-
 export default function Home() {
   return (
     <div>
