@@ -113,7 +113,7 @@ const FeaturesSection = () => {
           {featureCards.map((feature, i) => (
             <ScrollReveal
               key={i}
-              delay={i > 1 ? i - 0.8 : i}
+              // delay={i > 1 ? i - 0.8 : i}
               direction={i % 3 == 0 ? "up" : "down"}
             >
               <article
@@ -147,7 +147,7 @@ const FeaturesSection = () => {
           {stats.map((stat, i) => (
             <ScrollReveal
               key={i}
-              delay={i > 1 ? i - 0.5 : i}
+              // delay={i > 1 ? i - 0.5 : i}
               direction={i % 3 == 0 ? "up" : "down"}
             >
               <div

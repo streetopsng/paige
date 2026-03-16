@@ -130,7 +130,7 @@ const SolutionSection = () => {
           {audienceCards.map((card, i) => (
             <ScrollReveal
               key={i}
-              delay={i > 1 ? i - 0.7 : i}
+              // delay={i > 1 ? i - 0.7 : i}
               direction={i % 2 == 0 ? "right" : "left"}
             >
               <article
@@ -198,7 +198,7 @@ const SolutionSection = () => {
           {valueCards.map((card, i) => (
             <ScrollReveal
               key={i}
-              delay={i > 0 ? i + 0.6 : i}
+              // delay={i > 0 ? i + 0.6 : i}
               direction={i % 2 == 0 ? "right" : "left"}
             >
               <article
