@@ -70,7 +70,7 @@ const HeaderHeroSection = () => {
                   onClick={() => setShowMenu(false)}
                   key={index}
                   href=""
-                  className="mt-4 text-lg font-medium"
+                  className="mt-4 text-lg font-medium font-mont"
                 >
                   {item.title}
                 </a>
@@ -80,10 +80,7 @@ const HeaderHeroSection = () => {
         </section>
       )}
       <main className="relative min-h-screen overflow-hidden  text-foreground">
-        <div
-          className="absolute inset-x-0 top-0 h-px bg-border"
-          aria-hidden="true"
-        />
+        <div className="absolute inset-x-0 top-0 h-px bg-border" />
         <div className="hero-gradient  absolute inset-0 opacity-70" />
 
         <header className="relative z-10 mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-4 md:px-4">
@@ -96,7 +93,7 @@ const HeaderHeroSection = () => {
               <span className="text-3xl font-semibold tracking-tight text-primary">
                 Paige
               </span>
-              <span className="text-[0.5rem]   text-muted-foreground">
+              <span className="text-[0.5rem]   text-muted-foreground font-mont">
                 by{" "}
                 <span className="font-medium text-[0.6rem] text-muted-foreground">
                   StreetOps
@@ -113,7 +110,7 @@ const HeaderHeroSection = () => {
               <a
                 key={item.title}
                 href={`#${item.title.toLowerCase().replace(/\s+/g, "-")}`}
-                className="text-sm text-muted-foreground hover:text-foreground"
+                className="text-sm font-mont text-muted-foreground hover:text-foreground"
               >
                 {item.title}
               </a>
@@ -139,7 +136,7 @@ const HeaderHeroSection = () => {
               )}
             </button>
             <Button
-              className="cursor-pointer"
+              className="cursor-pointer font-mont"
               onClick={() => {
                 document
                   .getElementById("early-access")
@@ -164,7 +161,7 @@ const HeaderHeroSection = () => {
           className="relative z-10 mx-auto flex min-h-[calc(100vh-88px)] max-w-4xl flex-col items-center justify-center px-6 pb-20 pt-14 text-center md:px-4 md:pt-8"
         >
           <ScrollReveal direction="down">
-            <div className="mb-8 inline-flex rounded-full border-2 border-primary bg-transparent px-4 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-primary">
+            <div className="bg-[#FFBF9D66] dark:bg-[#5C3D0066] text-primary mb-8 inline-flex rounded-full border-2 border-primary  px-4 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.22em]  font-poppins">
               Behavioural Technology Driven
             </div>
           </ScrollReveal>
@@ -179,7 +176,7 @@ const HeaderHeroSection = () => {
             </ScrollReveal>
           </h1>
           <ScrollReveal direction="up">
-            <p className="mt-8 max-w-2xl  leading-6 text-muted-foreground ">
+            <p className="mt-8 max-w-2xl  font-mont text-muted-foreground ">
               Every team lead needs a tool that gives them deep insight into how
               their team is doing, what they need to thrive, and what to do to
               boost team engagement from anywhere and anytime.
@@ -193,7 +190,7 @@ const HeaderHeroSection = () => {
                   .getElementById("early-access")
                   ?.scrollIntoView({ behavior: "smooth" });
               }}
-              className="min-w-52 bg-primary py-6 cursor-pointer"
+              className="min-w-52 bg-primary py-6 cursor-pointer font-mont"
             >
               Get early access
               <ArrowRight className="h-4 w-4" />

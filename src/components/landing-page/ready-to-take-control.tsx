@@ -12,7 +12,7 @@ const ReadyToTakeControl = () => {
             Ready to take control of your team&apos;s engagement?
           </h2>
 
-          <p className="mx-auto mt-16  max-w-xl text-sm leading-relaxed text-foreground/80 font-body md:text-base">
+          <p className="mx-auto mt-16  max-w-xl text-sm leading-relaxed text-foreground/80 font-mont font-semibold md:text-base">
             Stop leading blind. Join team leads using Paige to build teams that
             are engaged, performing, and built to last.
           </p>

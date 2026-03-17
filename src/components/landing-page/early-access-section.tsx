@@ -86,7 +86,7 @@ const EarlyAccessSection = () => {
       <div className="mx-auto grid max-w-6xl gap-8 overflow-hidden rounded-[2rem]   md:px-10  lg:grid-cols-2 lg:items-start lg:gap-10">
         <div className="max-w-xl px-4">
           <ScrollReveal delay={0.5} direction="up">
-            <span className="bg-[#FFBF9D66]  dark:bg-transparent border-primary border  text-primary text-xs font-semibold tracking-widest uppercase px-4 py-1 rounded-full ">
+            <span className="bg-[#FFBF9D66] dark:bg-[#5C3D0066] text-primary font-poppins     text-xs font-semibold tracking-widest uppercase px-4 py-1 rounded-full ">
               Beta Access — Limited Spots
             </span>
           </ScrollReveal>
@@ -98,7 +98,7 @@ const EarlyAccessSection = () => {
           </ScrollReveal>
 
           <ScrollReveal direction="down">
-            <p className="mt-5 max-w-lg text-lg  text-inverse-muted font-body">
+            <p className="mt-5 max-w-lg text-md  font-mont">
               Join our early access list today. Beta users get founder pricing
               locked in for 12 months, white-glove onboarding, and the ability
               to shape the product roadmap.
@@ -109,10 +109,10 @@ const EarlyAccessSection = () => {
             {benefits.map((benefit) => (
               <li
                 key={benefit}
-                className="flex items-start gap-3 text-sm  font-body"
+                className="flex items-start text-sm  gap-3   font-mont text-muted-foreground"
               >
                 <CheckCircle2 className="mt-0.5 h-4 w-4  " />
-                <span>{benefit}</span>
+                <span className=" text-sm font-light ">{benefit}</span>
               </li>
             ))}
           </ul>
@@ -120,10 +120,10 @@ const EarlyAccessSection = () => {
 
         <div className="rounded-md bg-[#FFE5D8] dark:bg-[#201E1D] p-5 md:p-6">
           <div>
-            <h3 className="font-heading text-3xl text-inverse-foreground">
+            <h3 className=" text-3xl text-inverse-foreground">
               Request Early Access
             </h3>
-            <p className="mt-2 text-sm leading-relaxed text-inverse-muted font-body">
+            <p className="mt-2 text-sm leading-relaxed text-inverse-muted font-mont">
               We&apos;ll reach out with your onboarding details within 48 hours.
             </p>
           </div>
@@ -183,7 +183,7 @@ const EarlyAccessSection = () => {
               <Button
                 type="submit"
                 disabled={isLoading}
-                className="mt-2 h-12 w-full rounded-xl font-body text-primary-foreground cursor-pointer"
+                className="mt-2 h-12 w-full rounded-xl font-body text-primary-foreground cursor-pointer font-mont"
               >
                 {isLoading ? (
                   <Loader2 className="animate-spin" />
@@ -205,7 +205,7 @@ const EarlyAccessSection = () => {
             </Button> */}
           </form>
 
-          <p className="mt-5 text-center text-xs leading-relaxed text-inverse-muted font-body">
+          <p className="mt-5 text-center text-xs leading-relaxed text-inverse-muted font-mont">
             By submitting, you agree to our Privacy Policy. No spam, ever.
           </p>
         </div>

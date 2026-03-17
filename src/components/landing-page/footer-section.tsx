@@ -15,7 +15,7 @@ const footerColumns = [
     links: [
       "About Us",
       "Contact Us",
-      "The People Economics Newsletter",
+      "The People Economics (Newsletter)",
       "Careers",
     ],
   },
@@ -31,9 +31,17 @@ const footerColumns = [
 ];
 
 const socialLinks = [
-  { label: "X", href: "#" },
-  { label: "Instagram", href: "#", icon: Instagram },
-  { label: "LinkedIn", href: "#", icon: Linkedin },
+  { label: "X", href: "https://x.com/StreetOpsng" },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/street_opsng/",
+    icon: Instagram,
+  },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/company/streetopsng",
+    icon: Linkedin,
+  },
 ];
 
 const FooterSection = () => {
@@ -51,7 +59,7 @@ const FooterSection = () => {
               </p>
             </div>
 
-            <p className="mt-5 font-body text-sm leading-relaxed text-foreground/70">
+            <p className="mt-5 font-mont text-sm leading-relaxed text-foreground/70">
               Paige is the team engagement intelligence platform helping
               organizations build high- performing, psychologically safe teams —
               one pulse check at a time.
@@ -66,6 +74,7 @@ const FooterSection = () => {
                     key={item.label}
                     href={item.href}
                     aria-label={item.label}
+                    target="_blank"
                     className="flex h-8 w-8 bg-[#302C28] dark:bg-[#302C28] items-center justify-center rounded-md   transition-colors 5"
                   >
                     {Icon ? (
@@ -82,8 +91,8 @@ const FooterSection = () => {
           </div>
 
           {footerColumns.map((column) => (
-            <div key={column.title}>
-              <h2 className="font-body text-sm font-semibold text-foreground">
+            <div key={column.title} className="font-mont">
+              <h2 className=" text-sm font-semibold text-foreground">
                 {column.title}
               </h2>
               <ul className="mt-4 space-y-2.5">
@@ -91,7 +100,7 @@ const FooterSection = () => {
                   <li key={link}>
                     <a
                       href="#"
-                      className="font-body text-xs leading-relaxed text-foreground/65 transition-colors hover:text-foreground"
+                      className=" text-xs leading-relaxed text-foreground/65 transition-colors hover:text-foreground"
                     >
                       {link}
                     </a>
@@ -102,8 +111,8 @@ const FooterSection = () => {
           ))}
         </div>
 
-        <div className=" pointer-events-none relative  text-center h-[50vh] ">
-          <h1 className="overflow-hidden font-semibold lg:text-[20rem] text-[10rem] text-foreground/6 ">
+        <div className=" pointer-events-none relative flex items-center justify-center  text-center lg:min-h-[50vh] min-h-[20vh]">
+          <h1 className=" font-semibold lg:text-[25rem] text-[5rem] text-foreground/6  m-0 leading-[0.8] tracking-widest">
             Paige
           </h1>
         </div>

@@ -56,7 +56,7 @@ const FaqSection = () => {
             {faqCategories.map((category, index) => (
               <span
                 key={category}
-                className={`rounded-full border px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.18em] font-body ${
+                className={`rounded-full border px-4 py-2 text-[11px]  uppercase tracking-[0.18em] font-mont ${
                   index === 0
                     ? "border-primary bg-primary text-primary-foreground"
                     : "border-black bg-inverse-card text-inverse-foreground "
@@ -80,13 +80,13 @@ const FaqSection = () => {
                 value={item.question}
                 className=""
               >
-                <AccordionTrigger className="py-4 text-left text-sm text-inverse-foreground hover:no-underline font-body ">
+                <AccordionTrigger className="py-4 text-left text-sm text-inverse-foreground hover:no-underline font-mont ">
                   <span>{item.question}</span>
                   {/* <span className=" ml-4 flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-border/40 bg-inverse-card text-inverse-muted">
                     <Plus className="h-3.5 w-3.5" />
                   </span> */}
                 </AccordionTrigger>
-                <AccordionContent className="pr-12 text-sm leading-relaxed text-inverse-muted font-body">
+                <AccordionContent className="pr-12 text-sm leading-relaxed text-inverse-muted font-mont">
                   {item.answer}
                 </AccordionContent>
               </AccordionItem>
