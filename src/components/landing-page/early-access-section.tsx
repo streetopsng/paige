@@ -161,11 +161,15 @@ const EarlyAccessSection = () => {
                 <SelectValue placeholder="I am a..." />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="founder">Founder / Executive</SelectItem>
-                <SelectItem value="executive">Executive</SelectItem>
-                <SelectItem value="hr-leader">HR Leader</SelectItem>
-                <SelectItem value="people-manager">People Manager</SelectItem>
-                <SelectItem value="team-memeber">Team Member</SelectItem>
+                <SelectItem value="founder-executive">
+                  Founder / Executive
+                </SelectItem>
+                <SelectItem value="ceo">CEO</SelectItem>
+                <SelectItem value="hr-leader-people-manager">
+                  HR Leader / People Manager
+                </SelectItem>
+                <SelectItem value="manager">Manager</SelectItem>
+                <SelectItem value="team-lead">Team Lead</SelectItem>
                 <SelectItem value="Others">Others</SelectItem>
               </SelectContent>
             </Select>
