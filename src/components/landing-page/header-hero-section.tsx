@@ -63,7 +63,7 @@ const HeaderHeroSection = () => {
           </header>
           <hr />
 
-          <div className="flex flex-col px-4">
+          {/* <div className="flex flex-col px-4">
             {navItems.map((item, index) => {
               return (
                 <a
@@ -77,7 +77,7 @@ const HeaderHeroSection = () => {
                 </a>
               );
             })}
-          </div>
+          </div> */}
         </section>
       )}
       <main className="relative min-h-screen overflow-hidden  text-foreground">
@@ -103,7 +103,7 @@ const HeaderHeroSection = () => {
             </a>
           </div>
 
-          <nav
+          {/* <nav
             className="hidden items-center gap-10 md:flex"
             aria-label="Primary"
           >
@@ -117,7 +117,7 @@ const HeaderHeroSection = () => {
                 {item.title}
               </a>
             ))}
-          </nav>
+          </nav> */}
 
           <div className="flex items-center gap-2 ">
             <button
@@ -129,7 +129,7 @@ const HeaderHeroSection = () => {
                 }
               }}
               type="button"
-              className="cursor-pointer md:inline hidden"
+              className="cursor-pointer inline"
             >
               {theme == "light" ? (
                 <Moon className=" h-4 w-4" />
@@ -148,13 +148,13 @@ const HeaderHeroSection = () => {
             >
               Get Early Access
             </Button>
-            <Button
+            {/* <Button
               type="button"
               onClick={() => setShowMenu(true)}
               className="md:hidden inline "
             >
               <Menu />
-            </Button>
+            </Button> */}
           </div>
         </header>
 
