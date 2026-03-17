@@ -50,26 +50,24 @@ const socialLinks = [
 
 const FooterSection = () => {
   return (
-    <footer className="relative overflow-hidden border-t border-border   pt-10  md:pt-12">
+    <footer className="relative overflow-hidden border-t border-border   pt-10  md:pt-12 ">
       <div className="relative mx-auto">
-        <div className="flex flex-col md:flex-row justify-evenly">
-          <div className=" max-w-[20%] ">
+        <div className="flex flex-col md:flex-row md:justify-evenly  md:pl-0 pl-8 gap-y-4 py-4">
+          <div className=" lg:max-w-[20%] ">
             <div className="">
-              <p className="font-heading text-4xl leading-none text-primary">
+              <p className="font-heading text-4xl leading-none text-primary ">
                 Paige
               </p>
-              <p className="mt-1 font-body text-xs text-foreground/70">
-                by StreetOps
-              </p>
+              <p className="mt-1  text-xs text-foreground/70">by StreetOps</p>
             </div>
 
-            <div className="mt-5 font-mont text-sm text-foreground/70 w-full text-wrap">
+            <div className="mt-5 md:w-full w-2/4 md:font-normal font-light  font-mont text-sm  ">
               Paige is the team engagement intelligence platform helping
               organizations build high- performing, psychologically safe teams —
               one pulse check at a time.
             </div>
 
-            <div className="mt-6 flex flex-wrap  gap-2">
+            <div className="md:mt-6 mt-2 flex flex-wrap  gap-2">
               {socialLinks.map((item) => {
                 const Icon = item.icon;
 
@@ -95,11 +93,11 @@ const FooterSection = () => {
           </div>
 
           {footerColumns.map((column) => (
-            <div key={column.title} className="font-mont max-w-[20%]">
+            <div key={column.title} className="font-mont lg:max-w-[20%]">
               <h2 className=" text-sm font-semibold text-foreground">
                 {column.title}
               </h2>
-              <ul className="mt-4 space-y-3">
+              <ul className="md:mt-4 md:space-y-3 space-y-1">
                 {column.links.map((link, index) => (
                   <li key={index}>
                     <a
@@ -116,7 +114,7 @@ const FooterSection = () => {
         </div>
 
         <div className=" pointer-events-none relative flex items-center justify-center  text-center lg:min-h-[50vh] min-h-[20vh]">
-          <h1 className=" font-semibold lg:text-[25rem] text-[5rem] text-foreground/6  m-0 leading-[0.8] tracking-widest">
+          <h1 className=" font-semibold lg:text-[21rem] text-[5rem] text-foreground/6  m-0 leading-[0.8] tracking-widest">
             Paige
           </h1>
         </div>

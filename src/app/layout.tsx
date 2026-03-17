@@ -34,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={` antialiased bg-background text-foreground font-fraunces `}
+        className={` antialiased bg-background text-foreground font-fraunces transition-all duration-500 ease-in-out`}
       >
         <ThemeProvider
           attribute="class"
