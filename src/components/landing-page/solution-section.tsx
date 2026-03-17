@@ -119,7 +119,7 @@ const SolutionSection = () => {
             </h2>
           </ScrollReveal>
           <ScrollReveal>
-            <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg font-body">
+            <p className="mx-auto mt-5 max-w-2xl font-mont  text-muted-foreground  ">
               The first team engagement intelligence platform built for the
               realities of modern work — continuous, actionable, and designed
               for every layer of your organization.
@@ -144,7 +144,7 @@ const SolutionSection = () => {
                 <h3 className="text-lg leading-tight text-card-foreground">
                   {card.title}
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground font-body">
+                <p className="mt-3 font-mont text-sm leading-relaxed text-muted-foreground ">
                   {card.description}
                 </p>
               </article>
@@ -156,8 +156,8 @@ const SolutionSection = () => {
           {tabs.map((tab, i) => (
             <span
               key={tab}
-              className={`rounded-full border md:w-1/5 w-[45%]  text-center  text-[11px] md:font-semibold uppercase   py-2 ${
-                "border-border bg-background text-foreground"
+              className={`rounded-full border md:w-1/5 w-[45%]  text-center font-poppins text-[11px] md:font-semibold uppercase   py-2 ${
+                "border-border bg-background text-foreground "
                 // index === 0
                 //   ? "border-primary bg-primary text-primary-foreground"
                 //   : "border-border bg-background text-foreground"
@@ -176,7 +176,7 @@ const SolutionSection = () => {
               </h2>
             </ScrollReveal>
             <ScrollReveal delay={1} direction="up">
-              <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground font-body">
+              <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground font-poppins">
                 Organizations using Paige gain full visibility into team
                 engagement across the entire company — unlocking proactive,
                 data-driven people management at scale.
@@ -217,7 +217,7 @@ const SolutionSection = () => {
                 <h3 className="text-lg leading-tight text-card-foreground">
                   {card.title}
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground font-body">
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground font-mont">
                   {card.description}
                 </p>
               </article>

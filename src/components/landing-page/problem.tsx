@@ -65,7 +65,7 @@ const ProblemSection = () => {
         {/* Badge */}
         <div className="flex justify-center mb-6 px-4 md:px-8">
           <ScrollReveal direction="down">
-            <span className="bg-[#FFBF9D66]  dark:bg-transparent border-primary border text-primary text-xs font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full ">
+            <span className="bg-[#FFBF9D66] dark:bg-[#5C3D0066] text-primary   text-xs font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full ">
               THE PROBLEM
             </span>
           </ScrollReveal>
@@ -93,13 +93,13 @@ const ProblemSection = () => {
                 key={card.label}
                 className="bg-[#FFBF9D66] dark:bg-[#161412] border border-primary rounded-lg p-6 md:p-8"
               >
-                <span className="text-primary text-xs font-semibold tracking-widest uppercase ">
+                <span className="text-primary font-mont text-xs font-semibold tracking-widest uppercase ">
                   {card.label}
                 </span>
                 <h3 className=" text-xl md:text-2xl mt-2 mb-3 text-card-foreground">
                   {card.title}
                 </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed ">
+                <p className="text-muted-foreground font-mont text-sm leading-relaxed ">
                   {card.description}
                 </p>
               </div>
@@ -123,7 +123,7 @@ const ProblemSection = () => {
                 <p className="font-semibold text-3xl md:text-4xl text-primary mb-2">
                   {stat.value}
                 </p>
-                <p className=" text-muted-foreground text-xs leading-relaxed ">
+                <p className=" text-muted-foreground text-xs leading-relaxed font-mont">
                   {stat.description}
                 </p>
               </div>

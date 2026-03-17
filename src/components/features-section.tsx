@@ -104,7 +104,7 @@ const FeaturesSection = () => {
               </span>
             </h2>
           </ScrollReveal>
-          <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground font-body md:text-lg">
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground font-mont md:text-lg">
             Built for teams of 5 to 5,000, every feature is designed to reduce
             friction and maximize insight.
           </p>
@@ -123,7 +123,7 @@ const FeaturesSection = () => {
                 <h3 className="font-semibold  leading-tight text-card-foreground">
                   {feature.title}
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground font-body">
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground font-mont">
                   {feature.description}
                 </p>
               </article>
@@ -159,7 +159,7 @@ const FeaturesSection = () => {
                 <p className="font-semibold text-3xl md:text-4xl text-primary mb-2">
                   {stat.value}
                 </p>
-                <p className=" text-muted-foreground text-xs leading-relaxed ">
+                <p className=" text-muted-foreground text-xs leading-relaxed font-mont">
                   {stat.description}
                 </p>
               </div>
