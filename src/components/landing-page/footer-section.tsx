@@ -52,7 +52,7 @@ const FooterSection = () => {
   return (
     <footer className="relative overflow-hidden border-t border-border   pt-10  md:pt-12 ">
       <div className="relative mx-auto">
-        <div className="flex flex-col md:flex-row md:justify-evenly  md:pl-0 pl-8 gap-y-4 py-4">
+        <div className="flex flex-col md:flex-row md:justify-evenly  md:pl-0 pl-4 gap-y-4 py-4">
           <div className=" lg:max-w-[20%] ">
             <div className="">
               <p className="font-heading text-4xl leading-none text-primary ">
