@@ -11,9 +11,9 @@ import ScrollReveal from "../framer-motion-animations/scroll-reveal";
 gsap.registerPlugin(ScrambleTextPlugin);
 
 const navItems = [
-  { title: "Features", link: "" },
-  { title: "About Us", link: "" },
-  { title: "Contact Us", link: "" },
+  // { title: "Features", link: "" },
+  { title: "About Us", link: "https://www.streetops.ng/about" },
+  { title: "Contact Us", link: "https://www.streetops.ng/#ready-to-build" },
 ];
 const HeaderHeroSection = () => {
   const { setTheme, theme } = useTheme();
@@ -69,7 +69,8 @@ const HeaderHeroSection = () => {
                 <a
                   onClick={() => setShowMenu(false)}
                   key={index}
-                  href=""
+                  href={item.link}
+                  target="_blank"
                   className="mt-4 text-lg font-medium font-mont"
                 >
                   {item.title}
@@ -86,7 +87,7 @@ const HeaderHeroSection = () => {
         <header className="relative z-10 mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-4 md:px-4">
           <div>
             <a
-              href="#home"
+              href="#"
               className="inline-flex flex-col"
               aria-label="Paige home"
             >
@@ -109,7 +110,8 @@ const HeaderHeroSection = () => {
             {navItems.map((item) => (
               <a
                 key={item.title}
-                href={`#${item.title.toLowerCase().replace(/\s+/g, "-")}`}
+                href={item.link}
+                target="_blank"
                 className="text-sm font-mont text-muted-foreground hover:text-foreground"
               >
                 {item.title}
@@ -158,7 +160,7 @@ const HeaderHeroSection = () => {
 
         <section
           id="home"
-          className="relative z-10 mx-auto flex min-h-[calc(100vh-88px)] max-w-4xl flex-col items-center justify-center px-6 pb-20 pt-14 text-center md:px-4 md:pt-8"
+          className="relative z-10 mx-auto flex min-h-screen gap-y-20 max-w-4xl flex-col items-center justify-center px-6 pb-2 pt-2 text-center "
         >
           <ScrollReveal direction="down">
             <div className="bg-[#FFBF9D66] dark:bg-[#5C3D0066] text-primary mb-8 inline-flex rounded-full border-2 border-primary  px-4 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.22em]  font-poppins">
@@ -166,22 +168,24 @@ const HeaderHeroSection = () => {
             </div>
           </ScrollReveal>
 
-          <h1 className="max-w-4xl text-balance text-5xl leading-[0.95] tracking-[-0.04em] md:text-7xl lg:text-[5.5rem]">
-            <span className="font-semibold" ref={textRef}></span>
-            <br />
-            <ScrollReveal variant="fade">
-              <span className="font-semibold text-primary ">
-                you can count on.
-              </span>
+          <div>
+            <h1 className="max-w-4xl text-balance text-5xl leading-[0.95] tracking-[-0.04em] md:text-7xl lg:text-[5.5rem]">
+              <span className="font-semibold" ref={textRef}></span>
+              <br />
+              <ScrollReveal variant="fade">
+                <span className="font-semibold text-primary ">
+                  you can count on.
+                </span>
+              </ScrollReveal>
+            </h1>
+            <ScrollReveal direction="up">
+              <p className="mt-8 max-w-2xl  font-mont text-muted-foreground ">
+                Every team lead needs a tool that gives them deep insight into
+                how their team is doing, what they need to thrive, and what to
+                do to boost team engagement from anywhere and anytime.
+              </p>
             </ScrollReveal>
-          </h1>
-          <ScrollReveal direction="up">
-            <p className="mt-8 max-w-2xl  font-mont text-muted-foreground ">
-              Every team lead needs a tool that gives them deep insight into how
-              their team is doing, what they need to thrive, and what to do to
-              boost team engagement from anywhere and anytime.
-            </p>
-          </ScrollReveal>
+          </div>
 
           <div className="mt-12 flex flex-col items-center gap-4 sm:flex-row">
             <Button
