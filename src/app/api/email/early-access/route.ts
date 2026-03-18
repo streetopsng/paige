@@ -1,6 +1,7 @@
 import EarlyAccessForm from "@/emails/early-access-form";
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
+import Airtable from "airtable";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -9,14 +10,9 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
     const { companyName, whoIAm, workEmail, yourName } = body;
 
-    // const {
-    //   fullName,
-    //   email,
-    //   companyName,
-    //   phone,
-    //   package: selectedPackage,
-    //   description,
-    // } = body;
+    const base = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY }).base(
+      process.env.AIRTABLE_BASE_ID!,
+    );
 
     if (!whoIAm || !workEmail || !companyName || !yourName) {
       return NextResponse.json(
@@ -37,8 +33,15 @@ export async function POST(request: NextRequest) {
         whoIAm,
       }),
     });
+    const record = await base("Waitlist").create({
+      Name: yourName,
+      "Company Name": companyName,
+      "Work Email": workEmail,
+      Role: whoIAm,
+    });
 
-    console.log("response from resend", data, error);
+    // console.log("response from resend", data, error);
+    // console.log("record", record);
 
     if (error) {
       console.error("Resend error:", error);
@@ -48,6 +51,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // return NextResponse.json({ success: true });
     return NextResponse.json({ success: true, data });
   } catch (err) {
     console.error("Server error:", err);
